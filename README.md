@@ -1,1 +1,4 @@
-# CV_Code
+##CV Code Implementation With CPP
+
+##INCLUDE ALGORITHM
+	HOG Feature Extract
