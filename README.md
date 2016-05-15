@@ -1,4 +1,4 @@
-##CV Code Implementation With CPP
+CV Code Implementation With CPP
 
 ##INCLUDE ALGORITHM
 	HOG Feature Extract
