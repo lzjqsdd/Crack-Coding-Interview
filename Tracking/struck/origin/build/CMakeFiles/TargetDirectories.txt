@@ -1,0 +1,1 @@
+/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir

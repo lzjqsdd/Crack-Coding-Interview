@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(test)
+project(struck)
 
 if (NOT CMAKE_BUILD_TYPE)
     message(STATUS "No build type selected, defaulting to Release")
@@ -14,17 +14,17 @@ find_package(Eigen REQUIRED)
 find_package(OpenCV REQUIRED)
 
 include_directories(
+    src
     ${EIGEN_INCLUDE_DIRS}
     ${OpenCV_INCLUDE_DIRS}
 )
 
 # add all .cpp and .h files in src
-#file(GLOB_RECURSE SRC RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
-#file(GLOB_RECURSE HEADERS RELATIVE ${PROJECT_SOURCE_DIR} *.h)
+file(GLOB_RECURSE SRC RELATIVE ${PROJECT_SOURCE_DIR} src/*.cpp)
+file(GLOB_RECURSE HEADERS RELATIVE ${PROJECT_SOURCE_DIR} src/*.h)
 
-#add_executable(test ${HEADERS} ${SRC})
-add_executable(test eigen_test.cpp)
+add_executable(struck ${HEADERS} ${SRC})
 
-target_link_libraries(test
+target_link_libraries(struck
     ${OpenCV_LIBS}
 )
