@@ -89,14 +89,15 @@ void LaRank::Update(const MultiSample& sample, int y)
 {
 	// add new support pattern
 	SupportPattern* sp = new SupportPattern;
-	const vector<FloatRect>& rects = sample.GetRects();
-	FloatRect centre = rects[y];
+	const vector<FloatRect>& rects = sample.GetRects(); //得到一堆可能的rect位置
+	FloatRect centre = rects[y]; //传递0表示中Rect
 	for (int i = 0; i < (int)rects.size(); ++i)
 	{
 		// express r in coord frame of centre sample
 		FloatRect r = rects[i];
-		r.Translate(-centre.XMin(), -centre.YMin());
+		r.Translate(-centre.XMin(), -centre.YMin()); //计算变换y
 		sp->yv.push_back(r);
+		//这段主要展示细节运行过程
 		if (!m_config.quietMode && m_config.debugMode)
 		{
 			// store a thumbnail for each sample
@@ -108,6 +109,7 @@ void LaRank::Update(const MultiSample& sample, int y)
 		}
 	}
 	// evaluate features for each sample
+	//算每个sample的Feature
 	sp->x.resize(rects.size());
 	const_cast<Features&>(m_features).Eval(sample, sp->x);
 	sp->y = y;

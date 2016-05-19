@@ -28,6 +28,8 @@
 #ifndef TRACKER_H
 #define TRACKER_H
 
+#ifndef VERBOSE
+#define VERBOSE
 #include "Rect.h"
 
 #include <vector>

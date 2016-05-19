@@ -33,6 +33,7 @@
 
 using namespace std;
 
+//按照极坐标采样,nr表示极方向的扫描个数，nt表示角度方向扫描次数
 vector<FloatRect> Sampler::RadialSamples(FloatRect centre, int radius, int nr, int nt)
 {
 	vector<FloatRect> samples;

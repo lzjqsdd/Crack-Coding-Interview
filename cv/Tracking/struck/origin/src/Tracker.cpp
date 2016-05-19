@@ -156,6 +156,7 @@ void Tracker::Track(const cv::Mat& frame)
 	
 	ImageRep image(frame, m_needsIntegralImage, m_needsIntegralHist);
 	
+	//采样，预估一些可能出现的位置
 	vector<FloatRect> rects = Sampler::PixelSamples(m_bb, m_config.searchRadius);
 	
 	vector<FloatRect> keptRects;
@@ -171,6 +172,7 @@ void Tracker::Track(const cv::Mat& frame)
 	vector<double> scores;
 	m_pLearner->Eval(sample, scores);
 	
+	//找到最佳的那个位置
 	double bestScore = -DBL_MAX;
 	int bestInd = -1;
 	for (int i = 0; i < (int)keptRects.size(); ++i)
@@ -182,12 +184,13 @@ void Tracker::Track(const cv::Mat& frame)
 		}
 	}
 	
+	//更新Debug模式下的后台运行的搜索区域的图片情况
 	UpdateDebugImage(keptRects, m_bb, scores);
 	
 	if (bestInd != -1)
 	{
-		m_bb = keptRects[bestInd];
-		UpdateLearner(image);
+		m_bb = keptRects[bestInd]; //如果找到最佳的,更新BoundingBox,前面代码对应论文前三行
+		UpdateLearner(image);//Update Discriminant function
 #if VERBOSE		
 		cout << "track score: " << bestScore << endl;
 #endif
@@ -216,13 +219,15 @@ void Tracker::Debug()
 void Tracker::UpdateLearner(const ImageRep& image)
 {
 	// note these return the centre sample at index 0
-	vector<FloatRect> rects = Sampler::RadialSamples(m_bb, 2*m_config.searchRadius, 5, 16);
+	vector<FloatRect> rects = Sampler::RadialSamples(m_bb, 2*m_config.searchRadius, 5, 16);//按照极坐标方式采样效果更好
 	//vector<FloatRect> rects = Sampler::PixelSamples(m_bb, 2*m_config.searchRadius, true);
 	
 	vector<FloatRect> keptRects;
+	//第一个为正样本，因为采样是以第一个为中心进行采样。
 	keptRects.push_back(rects[0]); // the true sample
 	for (int i = 1; i < (int)rects.size(); ++i)
 	{
+		//可能出现的区域必须在图片大小范围内
 		if (!rects[i].IsInside(image.GetRect())) continue;
 		keptRects.push_back(rects[i]);
 	}

@@ -13,7 +13,7 @@ sequenceBasePath = sequences
 
 # video sequence to run the tracker on.
 # comment this out to use webcam.
-#sequenceName = girl
+sequenceName = girl
 #sequenceName = 
 
 # frame size for use during tracking.
