@@ -76,7 +76,7 @@ public:
 	int								searchRadius;
 	double							svmC;
 	int								svmBudgetSize;
-	std::vector<FeatureKernelPair>	features;
+	std::vector<FeatureKernelPair>	features; //表示提取的所有的特征向量，存放到一个vector中
 	
 	friend std::ostream& operator<< (std::ostream& out, const Config& conf);
 	

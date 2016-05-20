@@ -40,7 +40,6 @@ using namespace cv;
 static const int kLiveBoxWidth = 80;
 static const int kLiveBoxHeight = 80;
 
-//用来在图片上画BoundBox
 void rectangle(Mat& rMat, const FloatRect& rRect, const Scalar& rColour)
 {
 	IntRect r(rRect);

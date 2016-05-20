@@ -32,7 +32,7 @@
 #include "Rect.h"
 
 #include <vector>
-
+//该类用来保存一帧图片以及这帧图片上采样的区域列表
 class Sample
 {
 public:

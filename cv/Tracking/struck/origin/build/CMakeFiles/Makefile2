@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzjqsdd/github/struck
+CMAKE_SOURCE_DIR = /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzjqsdd/github/struck/build
+CMAKE_BINARY_DIR = /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/struck.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/lzjqsdd/github/struck/build
 CMakeFiles/struck.dir/all:
 	$(MAKE) -f CMakeFiles/struck.dir/build.make CMakeFiles/struck.dir/depend
 	$(MAKE) -f CMakeFiles/struck.dir/build.make CMakeFiles/struck.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13
 	@echo "Built target struck"
 .PHONY : CMakeFiles/struck.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/struck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/struck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzjqsdd/github/struck/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/struck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzjqsdd/github/struck/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles 0
 .PHONY : CMakeFiles/struck.dir/rule
 
 # Convenience name for target.

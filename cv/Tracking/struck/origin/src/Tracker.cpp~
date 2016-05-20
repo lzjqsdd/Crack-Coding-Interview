@@ -222,7 +222,7 @@ void Tracker::UpdateLearner(const ImageRep& image)
 	vector<FloatRect> rects = Sampler::RadialSamples(m_bb, 2*m_config.searchRadius, 5, 16);//按照极坐标方式采样效果更好
 	//vector<FloatRect> rects = Sampler::PixelSamples(m_bb, 2*m_config.searchRadius, true);
 	
-	vector<FloatRect> keptRects; //要保留的可能变换的位置rect
+	vector<FloatRect> keptRects;
 	//第一个为正样本，因为采样是以第一个为中心进行采样。
 	keptRects.push_back(rects[0]); // the true sample
 	for (int i = 1; i < (int)rects.size(); ++i)

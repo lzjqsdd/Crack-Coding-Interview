@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lzjqsdd/github/struck
+CMAKE_SOURCE_DIR = /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lzjqsdd/github/struck/build
+CMAKE_BINARY_DIR = /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/struck.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/struck.dir/flags.make
 
 CMakeFiles/struck.dir/src/HaarFeature.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/HaarFeature.cpp.o: ../src/HaarFeature.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/HaarFeature.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/HaarFeature.cpp.o -c /home/lzjqsdd/github/struck/src/HaarFeature.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/HaarFeature.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeature.cpp
 
 CMakeFiles/struck.dir/src/HaarFeature.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/HaarFeature.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/HaarFeature.cpp > CMakeFiles/struck.dir/src/HaarFeature.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeature.cpp > CMakeFiles/struck.dir/src/HaarFeature.cpp.i
 
 CMakeFiles/struck.dir/src/HaarFeature.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/HaarFeature.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/HaarFeature.cpp -o CMakeFiles/struck.dir/src/HaarFeature.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeature.cpp -o CMakeFiles/struck.dir/src/HaarFeature.cpp.s
 
 CMakeFiles/struck.dir/src/HaarFeature.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/HaarFeature.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/struck.dir/src/HaarFeature.cpp.o.provides.build: CMakeFiles/struck.di
 
 CMakeFiles/struck.dir/src/ImageRep.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/ImageRep.cpp.o: ../src/ImageRep.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/ImageRep.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/ImageRep.cpp.o -c /home/lzjqsdd/github/struck/src/ImageRep.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/ImageRep.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/ImageRep.cpp
 
 CMakeFiles/struck.dir/src/ImageRep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/ImageRep.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/ImageRep.cpp > CMakeFiles/struck.dir/src/ImageRep.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/ImageRep.cpp > CMakeFiles/struck.dir/src/ImageRep.cpp.i
 
 CMakeFiles/struck.dir/src/ImageRep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/ImageRep.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/ImageRep.cpp -o CMakeFiles/struck.dir/src/ImageRep.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/ImageRep.cpp -o CMakeFiles/struck.dir/src/ImageRep.cpp.s
 
 CMakeFiles/struck.dir/src/ImageRep.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/ImageRep.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/struck.dir/src/ImageRep.cpp.o.provides.build: CMakeFiles/struck.dir/s
 
 CMakeFiles/struck.dir/src/MultiFeatures.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/MultiFeatures.cpp.o: ../src/MultiFeatures.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/MultiFeatures.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/MultiFeatures.cpp.o -c /home/lzjqsdd/github/struck/src/MultiFeatures.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/MultiFeatures.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/MultiFeatures.cpp
 
 CMakeFiles/struck.dir/src/MultiFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/MultiFeatures.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/MultiFeatures.cpp > CMakeFiles/struck.dir/src/MultiFeatures.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/MultiFeatures.cpp > CMakeFiles/struck.dir/src/MultiFeatures.cpp.i
 
 CMakeFiles/struck.dir/src/MultiFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/MultiFeatures.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/MultiFeatures.cpp -o CMakeFiles/struck.dir/src/MultiFeatures.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/MultiFeatures.cpp -o CMakeFiles/struck.dir/src/MultiFeatures.cpp.s
 
 CMakeFiles/struck.dir/src/MultiFeatures.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/MultiFeatures.cpp.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/struck.dir/src/MultiFeatures.cpp.o.provides.build: CMakeFiles/struck.
 
 CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o: ../src/GraphUtils/GraphUtils.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o -c /home/lzjqsdd/github/struck/src/GraphUtils/GraphUtils.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/GraphUtils/GraphUtils.cpp
 
 CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/GraphUtils/GraphUtils.cpp > CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/GraphUtils/GraphUtils.cpp > CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.i
 
 CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/GraphUtils/GraphUtils.cpp -o CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/GraphUtils/GraphUtils.cpp -o CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.s
 
 CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o.requires
@@ -143,17 +143,17 @@ CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/struck.dir/src/Features.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/Features.cpp.o: ../src/Features.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/Features.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Features.cpp.o -c /home/lzjqsdd/github/struck/src/Features.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Features.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Features.cpp
 
 CMakeFiles/struck.dir/src/Features.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/Features.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/Features.cpp > CMakeFiles/struck.dir/src/Features.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Features.cpp > CMakeFiles/struck.dir/src/Features.cpp.i
 
 CMakeFiles/struck.dir/src/Features.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/Features.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/Features.cpp -o CMakeFiles/struck.dir/src/Features.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Features.cpp -o CMakeFiles/struck.dir/src/Features.cpp.s
 
 CMakeFiles/struck.dir/src/Features.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/Features.cpp.o.requires
@@ -166,17 +166,17 @@ CMakeFiles/struck.dir/src/Features.cpp.o.provides.build: CMakeFiles/struck.dir/s
 
 CMakeFiles/struck.dir/src/LaRank.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/LaRank.cpp.o: ../src/LaRank.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/LaRank.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/LaRank.cpp.o -c /home/lzjqsdd/github/struck/src/LaRank.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/LaRank.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/LaRank.cpp
 
 CMakeFiles/struck.dir/src/LaRank.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/LaRank.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/LaRank.cpp > CMakeFiles/struck.dir/src/LaRank.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/LaRank.cpp > CMakeFiles/struck.dir/src/LaRank.cpp.i
 
 CMakeFiles/struck.dir/src/LaRank.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/LaRank.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/LaRank.cpp -o CMakeFiles/struck.dir/src/LaRank.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/LaRank.cpp -o CMakeFiles/struck.dir/src/LaRank.cpp.s
 
 CMakeFiles/struck.dir/src/LaRank.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/LaRank.cpp.o.requires
@@ -189,17 +189,17 @@ CMakeFiles/struck.dir/src/LaRank.cpp.o.provides.build: CMakeFiles/struck.dir/src
 
 CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o: ../src/HistogramFeatures.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o -c /home/lzjqsdd/github/struck/src/HistogramFeatures.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HistogramFeatures.cpp
 
 CMakeFiles/struck.dir/src/HistogramFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/HistogramFeatures.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/HistogramFeatures.cpp > CMakeFiles/struck.dir/src/HistogramFeatures.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HistogramFeatures.cpp > CMakeFiles/struck.dir/src/HistogramFeatures.cpp.i
 
 CMakeFiles/struck.dir/src/HistogramFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/HistogramFeatures.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/HistogramFeatures.cpp -o CMakeFiles/struck.dir/src/HistogramFeatures.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HistogramFeatures.cpp -o CMakeFiles/struck.dir/src/HistogramFeatures.cpp.s
 
 CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o.requires
@@ -212,17 +212,17 @@ CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o.provides.build: CMakeFiles/str
 
 CMakeFiles/struck.dir/src/HaarFeatures.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/HaarFeatures.cpp.o: ../src/HaarFeatures.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/HaarFeatures.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/HaarFeatures.cpp.o -c /home/lzjqsdd/github/struck/src/HaarFeatures.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/HaarFeatures.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.cpp
 
 CMakeFiles/struck.dir/src/HaarFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/HaarFeatures.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/HaarFeatures.cpp > CMakeFiles/struck.dir/src/HaarFeatures.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.cpp > CMakeFiles/struck.dir/src/HaarFeatures.cpp.i
 
 CMakeFiles/struck.dir/src/HaarFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/HaarFeatures.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/HaarFeatures.cpp -o CMakeFiles/struck.dir/src/HaarFeatures.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.cpp -o CMakeFiles/struck.dir/src/HaarFeatures.cpp.s
 
 CMakeFiles/struck.dir/src/HaarFeatures.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/HaarFeatures.cpp.o.requires
@@ -235,17 +235,17 @@ CMakeFiles/struck.dir/src/HaarFeatures.cpp.o.provides.build: CMakeFiles/struck.d
 
 CMakeFiles/struck.dir/src/RawFeatures.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/RawFeatures.cpp.o: ../src/RawFeatures.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/RawFeatures.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/RawFeatures.cpp.o -c /home/lzjqsdd/github/struck/src/RawFeatures.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/RawFeatures.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/RawFeatures.cpp
 
 CMakeFiles/struck.dir/src/RawFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/RawFeatures.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/RawFeatures.cpp > CMakeFiles/struck.dir/src/RawFeatures.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/RawFeatures.cpp > CMakeFiles/struck.dir/src/RawFeatures.cpp.i
 
 CMakeFiles/struck.dir/src/RawFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/RawFeatures.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/RawFeatures.cpp -o CMakeFiles/struck.dir/src/RawFeatures.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/RawFeatures.cpp -o CMakeFiles/struck.dir/src/RawFeatures.cpp.s
 
 CMakeFiles/struck.dir/src/RawFeatures.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/RawFeatures.cpp.o.requires
@@ -258,17 +258,17 @@ CMakeFiles/struck.dir/src/RawFeatures.cpp.o.provides.build: CMakeFiles/struck.di
 
 CMakeFiles/struck.dir/src/Tracker.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/Tracker.cpp.o: ../src/Tracker.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/Tracker.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Tracker.cpp.o -c /home/lzjqsdd/github/struck/src/Tracker.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Tracker.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Tracker.cpp
 
 CMakeFiles/struck.dir/src/Tracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/Tracker.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/Tracker.cpp > CMakeFiles/struck.dir/src/Tracker.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Tracker.cpp > CMakeFiles/struck.dir/src/Tracker.cpp.i
 
 CMakeFiles/struck.dir/src/Tracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/Tracker.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/Tracker.cpp -o CMakeFiles/struck.dir/src/Tracker.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Tracker.cpp -o CMakeFiles/struck.dir/src/Tracker.cpp.s
 
 CMakeFiles/struck.dir/src/Tracker.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/Tracker.cpp.o.requires
@@ -281,17 +281,17 @@ CMakeFiles/struck.dir/src/Tracker.cpp.o.provides.build: CMakeFiles/struck.dir/sr
 
 CMakeFiles/struck.dir/src/main.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/main.cpp.o -c /home/lzjqsdd/github/struck/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/main.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/main.cpp
 
 CMakeFiles/struck.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/main.cpp > CMakeFiles/struck.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/main.cpp > CMakeFiles/struck.dir/src/main.cpp.i
 
 CMakeFiles/struck.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/main.cpp -o CMakeFiles/struck.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/main.cpp -o CMakeFiles/struck.dir/src/main.cpp.s
 
 CMakeFiles/struck.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/main.cpp.o.requires
@@ -304,17 +304,17 @@ CMakeFiles/struck.dir/src/main.cpp.o.provides.build: CMakeFiles/struck.dir/src/m
 
 CMakeFiles/struck.dir/src/Sampler.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/Sampler.cpp.o: ../src/Sampler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/Sampler.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Sampler.cpp.o -c /home/lzjqsdd/github/struck/src/Sampler.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Sampler.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Sampler.cpp
 
 CMakeFiles/struck.dir/src/Sampler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/Sampler.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/Sampler.cpp > CMakeFiles/struck.dir/src/Sampler.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Sampler.cpp > CMakeFiles/struck.dir/src/Sampler.cpp.i
 
 CMakeFiles/struck.dir/src/Sampler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/Sampler.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/Sampler.cpp -o CMakeFiles/struck.dir/src/Sampler.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Sampler.cpp -o CMakeFiles/struck.dir/src/Sampler.cpp.s
 
 CMakeFiles/struck.dir/src/Sampler.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/Sampler.cpp.o.requires
@@ -327,17 +327,17 @@ CMakeFiles/struck.dir/src/Sampler.cpp.o.provides.build: CMakeFiles/struck.dir/sr
 
 CMakeFiles/struck.dir/src/Config.cpp.o: CMakeFiles/struck.dir/flags.make
 CMakeFiles/struck.dir/src/Config.cpp.o: ../src/Config.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/struck/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/struck.dir/src/Config.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Config.cpp.o -c /home/lzjqsdd/github/struck/src/Config.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/struck.dir/src/Config.cpp.o -c /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Config.cpp
 
 CMakeFiles/struck.dir/src/Config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/struck.dir/src/Config.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/struck/src/Config.cpp > CMakeFiles/struck.dir/src/Config.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Config.cpp > CMakeFiles/struck.dir/src/Config.cpp.i
 
 CMakeFiles/struck.dir/src/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/struck.dir/src/Config.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/struck/src/Config.cpp -o CMakeFiles/struck.dir/src/Config.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Config.cpp -o CMakeFiles/struck.dir/src/Config.cpp.s
 
 CMakeFiles/struck.dir/src/Config.cpp.o.requires:
 .PHONY : CMakeFiles/struck.dir/src/Config.cpp.o.requires
@@ -442,6 +442,6 @@ CMakeFiles/struck.dir/clean:
 .PHONY : CMakeFiles/struck.dir/clean
 
 CMakeFiles/struck.dir/depend:
-	cd /home/lzjqsdd/github/struck/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzjqsdd/github/struck /home/lzjqsdd/github/struck /home/lzjqsdd/github/struck/build /home/lzjqsdd/github/struck/build /home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/struck.dir/depend
 

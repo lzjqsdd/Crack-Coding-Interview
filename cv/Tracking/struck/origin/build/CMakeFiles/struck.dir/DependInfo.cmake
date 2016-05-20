@@ -4,19 +4,19 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lzjqsdd/github/struck/src/Config.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/Config.cpp.o"
-  "/home/lzjqsdd/github/struck/src/Features.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/Features.cpp.o"
-  "/home/lzjqsdd/github/struck/src/GraphUtils/GraphUtils.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o"
-  "/home/lzjqsdd/github/struck/src/HaarFeature.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/HaarFeature.cpp.o"
-  "/home/lzjqsdd/github/struck/src/HaarFeatures.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/HaarFeatures.cpp.o"
-  "/home/lzjqsdd/github/struck/src/HistogramFeatures.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o"
-  "/home/lzjqsdd/github/struck/src/ImageRep.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/ImageRep.cpp.o"
-  "/home/lzjqsdd/github/struck/src/LaRank.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/LaRank.cpp.o"
-  "/home/lzjqsdd/github/struck/src/MultiFeatures.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/MultiFeatures.cpp.o"
-  "/home/lzjqsdd/github/struck/src/RawFeatures.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/RawFeatures.cpp.o"
-  "/home/lzjqsdd/github/struck/src/Sampler.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/Sampler.cpp.o"
-  "/home/lzjqsdd/github/struck/src/Tracker.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/Tracker.cpp.o"
-  "/home/lzjqsdd/github/struck/src/main.cpp" "/home/lzjqsdd/github/struck/build/CMakeFiles/struck.dir/src/main.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Config.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/Config.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Features.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/Features.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/GraphUtils/GraphUtils.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/GraphUtils/GraphUtils.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeature.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/HaarFeature.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/HaarFeatures.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HistogramFeatures.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/HistogramFeatures.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/ImageRep.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/ImageRep.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/LaRank.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/LaRank.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/MultiFeatures.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/MultiFeatures.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/RawFeatures.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/RawFeatures.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Sampler.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/Sampler.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Tracker.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/Tracker.cpp.o"
+  "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/main.cpp" "/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/build/CMakeFiles/struck.dir/src/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

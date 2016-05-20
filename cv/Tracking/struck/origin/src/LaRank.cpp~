@@ -241,7 +241,7 @@ pair<int, double> LaRank::MinGradient(int ind)
 }
 
 //把当前帧的目标位置作为正样本，然后从其他中间找到使梯度g(y_i)最小的作为负样本
-void LaRank::ProcessNew(int ind) //ind是最后的m_sps中最后的那个向量的索引
+void LaRank::ProcessNew(int ind)
 {
 	cout<<"PrcessNew:"<<ind<<endl;
 	// gradient is -f(x,y) since loss=0,因为这个样本就是目标位置，yi==y,完全重叠

@@ -25,48 +25,47 @@
  * 
  */
 
-#ifndef TRACKER_H
-#define TRACKER_H
+#ifndef SAMPLE_H
+#define SAMPLE_H
 
+#include "ImageRep.h"
 #include "Rect.h"
 
 #include <vector>
-#include <Eigen/Core>
-#include <opencv/cv.h>
 
-class Config;
-class Features;
-class Kernel;
-class LaRank;
-class ImageRep;
-
-class Tracker
+class Sample
 {
 public:
-	Tracker(const Config& conf);
-	~Tracker();
+	Sample(const ImageRep& image, const FloatRect& roi) :
+		m_image(image),
+		m_roi(roi)
+	{
+	}
 	
-	void Initialise(const cv::Mat& frame, FloatRect bb);
-	void Reset();
-	void Track(const cv::Mat& frame);
-	void Debug();
-	
-	inline const FloatRect& GetBB() const { return m_bb; }
-	inline bool IsInitialised() const { return m_initialised; }
-	
+	inline const ImageRep& GetImage() const { return m_image; }
+	inline const FloatRect& GetROI() const { return m_roi; }
+
 private:
-	const Config& m_config;
-	bool m_initialised;
-	std::vector<Features*> m_features;
-	std::vector<Kernel*> m_kernels;
-	LaRank* m_pLearner;
-	FloatRect m_bb;
-	cv::Mat m_debugImage;
-	bool m_needsIntegralImage;
-	bool m_needsIntegralHist;
+	const ImageRep& m_image;
+	FloatRect m_roi;
+};
+
+class MultiSample
+{
+public:
+	MultiSample(const ImageRep& image, const std::vector<FloatRect>& rects) :
+		m_image(image),
+		m_rects(rects)
+	{
+	}
 	
-	void UpdateLearner(const ImageRep& image);
-	void UpdateDebugImage(const std::vector<FloatRect>& samples, const FloatRect& centre, const std::vector<double>& scores);
+	inline const ImageRep& GetImage() const { return m_image; }
+	inline const std::vector<FloatRect>& GetRects() const { return m_rects; }
+	inline Sample GetSample(int i) const { return Sample(m_image, m_rects[i]); }
+
+private:
+	const ImageRep& m_image;
+	std::vector<FloatRect> m_rects;
 };
 
 #endif
