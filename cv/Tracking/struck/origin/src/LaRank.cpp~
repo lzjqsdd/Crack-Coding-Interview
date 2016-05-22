@@ -61,6 +61,7 @@ LaRank::~LaRank()
 
 double LaRank::Evaluate(const Eigen::VectorXd& x, const FloatRect& y) const
 {
+	//这里y没有用到哎。。。对应公式9下面正文第二行
 	double f = 0.0;
 	for (int i = 0; i < (int)m_svs.size(); ++i)
 	{
@@ -136,6 +137,7 @@ void LaRank::BudgetMaintenance()
 {
 	if (m_config.svmBudgetSize > 0)
 	{
+		//如果多余预设的支持向量budget的大小，就要移除权值小的
 		while ((int)m_svs.size() > m_config.svmBudgetSize)
 		{
 			BudgetMaintenanceRemove();
@@ -207,7 +209,7 @@ void LaRank::SMOStep(int ipos, int ineg)
 	}
 	
 	// check if we should remove either sv now
-	
+	// 如果SMO中beta_i的值为0，移除这个向量
 	if (fabs(svp->b) < 1e-8)
 	{
 		RemoveSupportVector(ipos);
@@ -241,10 +243,10 @@ pair<int, double> LaRank::MinGradient(int ind)
 }
 
 //把当前帧的目标位置作为正样本，然后从其他中间找到使梯度g(y_i)最小的作为负样本
-void LaRank::ProcessNew(int ind)
+void LaRank::ProcessNew(int ind) //ind是最后的m_sps中最后的那个向量的索引
 {
-	cout<<"PrcessNew:"<<ind<<endl;
-	// gradient is -f(x,y) since loss=0,因为这个样本就是目标位置，yi==y,完全重叠
+	cout<<"PrcessNew:"<<ind<<"==m_sps->y:"<<m_sps[ind]->y<<endl;
+	// gradient is -f(x,y) since loss=0,(loss=0是因为这个样本就是目标位置，yi==y,完全重叠）
 	int ip = AddSupportVector(m_sps[ind], m_sps[ind]->y, -Evaluate(m_sps[ind]->x[m_sps[ind]->y],m_sps[ind]->yv[m_sps[ind]->y]));
 
 	pair<int, double> minGrad = MinGradient(ind);
@@ -387,7 +389,7 @@ void LaRank::RemoveSupportVector(int ind)
 #endif	
 
 	m_svs[ind]->x->refCount--;
-	if (m_svs[ind]->x->refCount == 0)
+	if (m_svs[ind]->x->refCount == 0) //如果这个支持模式不在有使用的话也移除
 	{
 		// also remove the support pattern
 		for (int i = 0; i < (int)m_sps.size(); ++i)
