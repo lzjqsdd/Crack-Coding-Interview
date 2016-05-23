@@ -17,8 +17,13 @@ bin_PROGRAMS = mystruck
 mystruck_SOURCES = \
 	main.cc \
 	Config.cpp \
-	Config.h 
-
+	Config.h \
+	sampler.cc \
+	sampler.h \
+	track.cc \
+	track.h \
+	haarfeature.cc \
+	haarfeature.h 
 
 mystruck_LDFLAGS = 
 

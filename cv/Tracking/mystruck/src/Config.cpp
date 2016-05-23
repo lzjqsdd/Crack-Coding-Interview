@@ -11,6 +11,6 @@ void Config::init()
 	height = 240;
 	basepath = "./train/girl/";
 	imgpath = "./train/girl/girl_frames.txt";
-	gtpath = "./train/gril/girl_gt.txt";
+	gtpath = "./train/girl/girl_gt.txt";
 	budgetSize = 100;
 }

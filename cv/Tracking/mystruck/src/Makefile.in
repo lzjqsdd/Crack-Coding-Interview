@@ -92,7 +92,8 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_mystruck_OBJECTS = main.$(OBJEXT) Config.$(OBJEXT)
+am_mystruck_OBJECTS = main.$(OBJEXT) Config.$(OBJEXT) \
+	sampler.$(OBJEXT) track.$(OBJEXT) haarfeature.$(OBJEXT)
 mystruck_OBJECTS = $(am_mystruck_OBJECTS)
 am__DEPENDENCIES_1 =
 mystruck_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -348,7 +349,13 @@ AM_CFLAGS = \
 mystruck_SOURCES = \
 	main.cc \
 	Config.cpp \
-	Config.h 
+	Config.h \
+	sampler.cc \
+	sampler.h \
+	track.cc \
+	track.h \
+	haarfeature.cc \
+	haarfeature.h
 
 mystruck_LDFLAGS = 
 mystruck_LDADD = $(MYSTRUCK_LIBS)
@@ -447,7 +454,10 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Config.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/haarfeature.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sampler.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/track.Po@am__quote@
 
 .cc.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

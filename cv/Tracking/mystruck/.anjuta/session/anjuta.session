@@ -2,15 +2,15 @@
 Maximized=1
 Geometry=1366x744+0+24
 
-[Execution]
-Run in terminal=2
-Working directories=../../../mystruck
-
 [File Loader]
-Files=../../src/main.cc#52%%%../../src/ImgProcess.h#12%%%../../src/Config.h#16%%%../../src/Config.cpp#10
+Files=../../src/haarfeature.cc#28%%%../../src/haarfeature.h#42%%%../../src/Makefile.am#27%%%../../src/main.cc#56%%%../../src/track.cc#37
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Run in terminal=2
+Working directories=../../../mystruck
 
 [Project Manager]
 Shortcut=mystruck//src//mystruck
@@ -18,12 +18,12 @@ Expand=mystruck%%%mystruck//src%%%mystruck//src//mystruck
 
 [Build]
 Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized%%%1:MinGW32:MinGW32
-Selected Configuration=Debug
+Selected Configuration=Default
 BuildArgs/Default=--enable-maintainer-mode
 BuildArgs/Debug=--enable-maintainer-mode 'CFLAGS=-g -O0' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
 BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
 BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'
 
 [Debugger]
-Breakpoint=1:../../src/Makefile.am:20:0:
+Breakpoint=1:../../src/Makefile.am:20:0:%%%1:../../src/main.cc:60:0:
 Stop at beginning=2

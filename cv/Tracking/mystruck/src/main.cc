@@ -21,40 +21,57 @@
 #include <fstream>
 #include "cv.h"
 #include "highgui.h"
-#include "Config.h"
 #include "ImgProcess.h"
+#include "track.h"
 
 using namespace std;
 
-void TrackFromFile(const char *path);
+void TrackFromFile();
 //读取配置文件
-Config m_config;
+Config m_config; //这个文件以后作为全局，主要传递m_initbb;
 
 int main(int agrc,char **argv)
 {	
-	TrackFromFile(m_config.imgpath.c_str());
+	TrackFromFile();
 }
 
-void TrackFromFile(const char *path)
+void TrackFromFile()
 {
     IplImage *img;
     IplImage *grayimg;
 
     string filename;
-    ifstream myfile(path);
-	cout<<path<<endl;
-    if (myfile)  // same as: if (myfile.good())
+    ifstream myfile(m_config.imgpath.c_str());
+    if (myfile)
     {
-        cvNamedWindow("File");
-        while (getline( myfile, filename ))  // same as: while (getline( myfile, line ).good())
+		getline(myfile,filename); //先拿初始的版本以及gt
+		string init_imgpath = m_config.basepath+filename;
+        img = cvLoadImage(init_imgpath.c_str());//加载第一个图片
+		
+		ifstream gtfile(m_config.gtpath.c_str()); //groudtruth文件
+		if(gtfile)
+		{
+			string gtdata;
+			getline(gtfile,gtdata);
+			float xmin,ymin,width,height; //从gt读到的bb的大小
+			sscanf(gtdata.c_str(),"%f\t%f\t%f\t%f",&xmin,&ymin,&width,&height);
+			float scaleX = m_config.width*1.0/img->width; //因为对图像归一化，所以BoundingBox也要按比例缩放
+			float scaleY = m_config.height*1.0/img->height;
+			cout<<scaleX<<endl<<scaleY<<endl;
+			m_config.m_initbb = cvRect(xmin*scaleX,ymin*scaleY,width*scaleX,height*scaleY);
+		}
+		else
+			cout<<"未找到groundTruth数据路径"<<endl;
+
+
+		Track tracker(m_config);
+		
+        while (getline( myfile, filename ))
         {
 			string imgpath = m_config.basepath+filename;
             img = cvLoadImage(imgpath.c_str());
             if(img==NULL) break;
-			
-            grayimg = cvCreateImage(cvGetSize(img),IPL_DEPTH_8U,1);
-            cvCvtColor(img,grayimg,CV_RGB2GRAY);
-            cvShowImage("File",grayimg);
+			tracker.track (img); //传递读取的原始图片
             cvWaitKey(100);
         }
         myfile.close();
@@ -62,5 +79,4 @@ void TrackFromFile(const char *path)
     cvReleaseImage(&img);
     cvDestroyWindow("File");
 }
-
 
