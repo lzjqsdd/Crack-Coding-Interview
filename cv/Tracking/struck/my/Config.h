@@ -13,5 +13,6 @@ class Config
 		string imgpath;
 		string resultpath;
 		int budgetSize;
+		Rect m_initbb;//
 		init();
 }

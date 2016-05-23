@@ -1,8 +1,9 @@
 [Anjuta]
-Geometry=681x715+683+24
+Maximized=1
+Geometry=1366x744+0+24
 
 [File Loader]
-Files=../../src/LaRank.cpp#23%%%../../src/LaRank.h#15%%%../../src/Sampler.cpp#39%%%../../src/Config.cpp#106%%%../../src/Config.h#79
+Files=../../src/LaRank.cpp#23%%%../../src/LaRank.h#15%%%../../src/Sampler.cpp#39%%%../../src/Config.cpp#106%%%../../src/Config.h#79%%%../../src/main.cpp#132%%%../../src/Rect.h#56%%%../../../my/Config.cpp#4
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
@@ -10,9 +11,6 @@ bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 [Execution]
 Run in terminal=2
 Working directories=../../../origin
-
-[Project Manager]
-Expand=origin%%%origin//src
 
 [Build]
 Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
