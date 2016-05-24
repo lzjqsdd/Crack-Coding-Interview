@@ -25,7 +25,7 @@
 
 using namespace std;
 
-void HaarFeature::SingleHaarFeature(FloatRect bb,int type)
+HaarFeature::HaarFeature(FloatRect bb,int type)
 {
 	//这里的CvRect可能需要改为Float，这里表示的是比例
 	m_bb = bb; //每个样本位置以bb表示。
@@ -129,7 +129,7 @@ int HaarFeature::sum(IplImage *img,FloatRect rect)
 
 
 //这个函数计算一个样本的所有的Haar特征存放到一个向量中。
-vector<float> HaarFeature::getFeatures(IplImage *img,vector<FloatRect> rects)
+vector<HaarFeature> HaarFeature::getFeature()
 {
 	vector<HaarFeature> m_features;
 	m_features.clear();
@@ -145,7 +145,7 @@ vector<float> HaarFeature::getFeatures(IplImage *img,vector<FloatRect> rects)
 				FloatRect r(x[ix]-s[is]/2, y[iy]-s[is]/2, s[is], s[is]);
 				for (int it = 0; it < 6; ++it)
 				{
-					m_features.push_back(HaarFeature(r, it));
+					m_features.push_back(HaarFeature(r,it));
 				}
 			}
 		}

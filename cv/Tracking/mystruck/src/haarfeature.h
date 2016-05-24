@@ -32,7 +32,6 @@ using namespace Eigen;
 class HaarFeature
 {
 public:
-	HaarFeature (IplImage *img,vector<FloatRect> rects);
 	HaarFeature(FloatRect bb,int type);
 	~HaarFeature();
 	
@@ -45,7 +44,8 @@ public:
 	
 	//vector<HaarFeature> m_features; //存放192维向量
 	Eigen::VectorXd m_featVec; //用来存放最终算好的192维Haar特征，
-	vector<float> getFeatures(IplImage *img,vector<FloatRect> rects); //计算每个sample的Haar特征
+	vector<HaarFeature> getFeature(); //计算每个sample的Haar特征
+
 };
 
 #endif // _HAARFEATURE_H_
