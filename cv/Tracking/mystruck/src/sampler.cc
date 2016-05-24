@@ -20,13 +20,13 @@
 #include "sampler.h"
 
 
-vector<CvRect> Sampler::RaidalSamples(CvRect TSample,int r,int nr,int nt)
+vector<FloatRect> Sampler::RaidalSamples(FloatRect TSample,int r,int nr,int nt)
 {
-	vector<CvRect> samples;
+	vector<FloatRect> samples;
 	samples.push_back(TSample); //先加入正样本（中心位置）
 	float rstep = (float)r/nr; //极方向步长
 	float tstep = (float)M_PI/nt; //旋转角度步长
-	CvRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
+	FloatRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
 	for(int ir=1;ir<=nr;ir++)
 	{
 		float phase = (ir%2)*tstep/2;
@@ -42,11 +42,11 @@ vector<CvRect> Sampler::RaidalSamples(CvRect TSample,int r,int nr,int nt)
 }
 
 
-vector<CvRect> Sampler::CircleSamples(CvRect TSample,int r)
+vector<FloatRect> Sampler::CircleSamples(FloatRect TSample,int r)
 {
-	vector<CvRect> samples;
+	vector<FloatRect> samples;
 	samples.push_back(TSample); //先加入正样本（中心位置）
-	CvRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
+	FloatRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
 	for(int ix = -r;ix<=r;ix++)
 		for(int iy = -r;iy<=r;iy++)
 		{

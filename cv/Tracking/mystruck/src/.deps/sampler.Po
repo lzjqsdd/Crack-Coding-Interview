@@ -191,7 +191,7 @@ sampler.o: sampler.cc /usr/include/stdc-predef.h sampler.h \
  /usr/local/opencv/include/opencv2/core/internal.hpp \
  /usr/local/opencv/include/opencv/highgui.h \
  /usr/local/opencv/include/opencv2/highgui/highgui_c.h \
- /usr/local/opencv/include/opencv2/highgui/highgui.hpp
+ /usr/local/opencv/include/opencv2/highgui/highgui.hpp floatrect.h
 
 /usr/include/stdc-predef.h:
 
@@ -654,3 +654,5 @@ sampler.h:
 /usr/local/opencv/include/opencv2/highgui/highgui_c.h:
 
 /usr/local/opencv/include/opencv2/highgui/highgui.hpp:
+
+floatrect.h:

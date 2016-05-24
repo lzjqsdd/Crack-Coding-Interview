@@ -194,8 +194,7 @@ main.o: main.cc /usr/include/stdc-predef.h /usr/include/c++/4.8/iostream \
  /usr/local/opencv/include/opencv2/core/internal.hpp \
  /usr/local/opencv/include/opencv/highgui.h \
  /usr/local/opencv/include/opencv2/highgui/highgui_c.h \
- /usr/local/opencv/include/opencv2/highgui/highgui.hpp ImgProcess.h \
- track.h Config.h
+ /usr/local/opencv/include/opencv2/highgui/highgui.hpp track.h Config.h
 
 /usr/include/stdc-predef.h:
 
@@ -666,8 +665,6 @@ main.o: main.cc /usr/include/stdc-predef.h /usr/include/c++/4.8/iostream \
 /usr/local/opencv/include/opencv2/highgui/highgui_c.h:
 
 /usr/local/opencv/include/opencv2/highgui/highgui.hpp:
-
-ImgProcess.h:
 
 track.h:
 

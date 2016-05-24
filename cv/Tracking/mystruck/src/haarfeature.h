@@ -22,31 +22,30 @@
 
 #include "cv.h"
 #include "highgui.h"
+#include "floatrect.h"
 #include <iostream>
 #include <vector>
+#include <Eigen/Core>
 using namespace std;
+using namespace Eigen;
+
 class HaarFeature
 {
 public:
-	HaarFeature(CvRect bb,int type);
+	HaarFeature (IplImage *img,vector<FloatRect> rects);
+	HaarFeature(FloatRect bb,int type);
 	~HaarFeature();
-	floatRect m_bb;
-	vector<CvRect> m_rects;
+	
+	FloatRect m_bb;
+	vector<FloatRect> m_rects; //因为这个变量存放的是每个样本的归一的值，用浮点表示.
 	vector<float> m_weights;
 	float m_factor;
-
-	float Eval(IplImage *image,CvRect roi);
-	int sum(IplImage *img,CvRect rect);
-
-	typedef struct floatRect
-	{
-		float x,y;
-		float width,height;
-	}floatRect;
-protected:
-
-private:
-
+	float Eval(IplImage *image,FloatRect roi); //其实是计算每个类型的特征的值.
+	int sum(IplImage *img,FloatRect rect);
+	
+	//vector<HaarFeature> m_features; //存放192维向量
+	Eigen::VectorXd m_featVec; //用来存放最终算好的192维Haar特征，
+	vector<float> getFeatures(IplImage *img,vector<FloatRect> rects); //计算每个sample的Haar特征
 };
 
 #endif // _HAARFEATURE_H_

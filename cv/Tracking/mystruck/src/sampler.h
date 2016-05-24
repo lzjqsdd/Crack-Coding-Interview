@@ -24,6 +24,7 @@
 #include "cv.h"
 #include "highgui.h"
 #include <cmath>
+#include "floatrect.h"
 
 using namespace std;
 
@@ -31,9 +32,9 @@ class Sampler
 {
 public:
 	//按照极坐标采样,返回一系列的矩形位置
-	vector<CvRect> RaidalSamples(CvRect TSample,int r,int nr,int nt); 
+	vector<FloatRect> RaidalSamples(FloatRect TSample,int r,int nr,int nt); 
 	//按照上下左右在一定圆内采样。
-	vector<CvRect> CircleSamples(CvRect TSample,int r);
+	vector<FloatRect> CircleSamples(FloatRect TSample,int r);
 protected:
 
 private:

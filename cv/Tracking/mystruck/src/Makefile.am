@@ -23,10 +23,16 @@ mystruck_SOURCES = \
 	track.cc \
 	track.h \
 	haarfeature.cc \
-	haarfeature.h 
+	haarfeature.h \
+	FloatRect.h \
+	floatrect.cc \
+	floatrect.h
 
 mystruck_LDFLAGS = 
 
 mystruck_LDADD = $(MYSTRUCK_LIBS)
 
 
+
+SUBDIRS = \
+	Eigen

@@ -21,7 +21,6 @@
 #include <fstream>
 #include "cv.h"
 #include "highgui.h"
-#include "ImgProcess.h"
 #include "track.h"
 
 using namespace std;
