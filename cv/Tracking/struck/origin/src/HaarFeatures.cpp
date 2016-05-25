@@ -52,7 +52,7 @@ void HaarFeatures::GenerateSystematic()
 				FloatRect r(x[ix]-s[is]/2, y[iy]-s[is]/2, s[is], s[is]);
 				for (int it = 0; it < 6; ++it)
 				{
-					cout << "HarrFeature("<<r<<","<<it<<")"<<endl;
+				//	cout << "HarrFeature("<<r<<","<<it<<")"<<endl;
 					m_features.push_back(HaarFeature(r, it));
 				}
 			}

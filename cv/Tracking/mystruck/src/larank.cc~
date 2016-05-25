@@ -59,7 +59,4 @@ pair<int,double> LaRank::MinGradient(int ind)
 	
 }
 
-void LaRank::Update(IplImage *img,vector<FloatRect> rects, int y)
-{
-	
-}
+void LaRank::Update(IplImage *img,vector<FloatRect> rects, int y);

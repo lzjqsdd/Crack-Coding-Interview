@@ -77,6 +77,7 @@ void LaRank::Eval(const MultiSample& sample, std::vector<double>& results)
 	vector<VectorXd> fvs;
 	const_cast<Features&>(m_features).Eval(sample, fvs);
 	results.resize(fvs.size());
+	cout<<"---------->"<<m_svs.size()<<endl;
 	for (int i = 0; i < (int)fvs.size(); ++i)
 	{
 		// express y in coord frame of centre sample

@@ -182,11 +182,12 @@ void Tracker::Track(const cv::Mat& frame)
 			bestScore = scores[i];
 			bestInd = i;
 		}
+		cout<<scores[i]<<"\t";
 	}
 	
 	//更新Debug模式下的后台运行的搜索区域的图片情况
 	UpdateDebugImage(keptRects, m_bb, scores);
-	
+	cout<<m_bb<<endl;
 	if (bestInd != -1)
 	{
 		m_bb = keptRects[bestInd]; //如果找到最佳的,更新BoundingBox,前面代码对应论文前三行
@@ -195,6 +196,7 @@ void Tracker::Track(const cv::Mat& frame)
 		cout << "track score: " << bestScore << endl;
 #endif
 	}
+	cout<<m_bb<<endl;
 }
 
 void Tracker::UpdateDebugImage(const vector<FloatRect>& samples, const FloatRect& centre, const vector<double>& scores)

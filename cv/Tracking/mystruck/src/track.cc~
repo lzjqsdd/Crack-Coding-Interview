@@ -68,7 +68,7 @@ void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,�
 void Track::Initialise (IplImage *img,FloatRect bb)
 {
 	m_bb = FloatRect(bb.x,bb.y,bb.width,bb.height);
-	UpdateLearner(img);
+	UpdateLearner(img,m_bb);
 }
 
 IplImage* Track::preprocess(IplImage *src)

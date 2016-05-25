@@ -24,6 +24,30 @@ vector
 
 /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/GraphUtils/GraphUtils.h
 
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeature.h
+Rect.h
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Rect.h
+ImageRep.h
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/ImageRep.h
+vector
+-
+
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.cpp
+HaarFeatures.h
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.h
+Config.h
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Config.h
+iostream
+-
+
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeatures.h
+Features.h
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Features.h
+HaarFeature.h
+/home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/HaarFeature.h
+vector
+-
+
 /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/ImageRep.h
 Rect.h
 /home/lzjqsdd/github/MLCode/cv/Tracking/struck/origin/src/Rect.h

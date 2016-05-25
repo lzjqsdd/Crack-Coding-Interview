@@ -71,7 +71,7 @@ void TrackFromFile()
             img = cvLoadImage(imgpath.c_str());
             if(img==NULL) break;
 			tracker.track (img); //传递读取的原始图片
-            cvWaitKey(0);
+            cvWaitKey(100);
         }
         myfile.close();
     }

@@ -39,7 +39,7 @@ public:
 	IplImage *preprocess(IplImage *src);//转换图片为灰度图
 	void track(IplImage *img); //进行预测的函数，根据前一帧的bb，采样预测
 	void draw(IplImage *img,FloatRect m_bb); //根据预测的BoundingBox画出矩形框
-	void UpdateLearner(IplImage *img); //根据得到的bb，再次进行采样然后更新分类器
+	void UpdateLearner(IplImage *img,FloatRect bb); //根据得到的bb，再次进行采样然后更新分类器
 protected:
 
 private:

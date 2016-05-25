@@ -2,15 +2,15 @@
 Maximized=1
 Geometry=1366x744+0+24
 
-[File Loader]
-Files=../../src/larank.cc#53%%%../../src/haarfeatures.cc#66%%%../../src/haarfeature.cc#118%%%../../src/track.cc#58%%%../../src/larank.h#35
-
-[Document Manager]
-bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
-
 [Execution]
 Run in terminal=2
 Working directories=../../../mystruck
+
+[File Loader]
+Files=../../src/track.cc#67%%%../../src/track.h#34%%%../../src/larank.cc#64%%%../../src/larank.h#39
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
 [Project Manager]
 Shortcut=mystruck//src//mystruck
