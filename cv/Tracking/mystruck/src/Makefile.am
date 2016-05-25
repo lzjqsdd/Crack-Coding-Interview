@@ -24,11 +24,13 @@ mystruck_SOURCES = \
 	track.h \
 	haarfeature.cc \
 	haarfeature.h \
-	FloatRect.h \
 	floatrect.cc \
 	floatrect.h \
 	haarfeatures.cc \
-	haarfeatures.h
+	haarfeatures.h \
+	larank.cc \
+	larank.h \
+	guassiankernel.h
 
 mystruck_LDFLAGS = 
 

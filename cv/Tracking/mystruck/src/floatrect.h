@@ -19,6 +19,8 @@
 
 #ifndef _FLOATRECT_H_
 #define _FLOATRECT_H_
+#include <iostream>
+using namespace std;
 
 class FloatRect
 {
@@ -27,10 +29,12 @@ public:
 	float y;
 	float width;
 	float height;
+	float maxx;
+	float maxy;
 
 	FloatRect();
 	FloatRect(float x,float y,float width,float height);
-	float overLap(FloatRect &rect2); //计算两个重叠
+	float Overlap(FloatRect &rect2); //计算两个重叠
 	inline float Area() const { return width * height; } //计算面积,用于haar特征归一化	
 	inline void Translate(float tx, float ty) { x += tx; y += ty; } //水平平移x,竖直平移y
 

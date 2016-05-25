@@ -94,7 +94,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_mystruck_OBJECTS = main.$(OBJEXT) Config.$(OBJEXT) \
 	sampler.$(OBJEXT) track.$(OBJEXT) haarfeature.$(OBJEXT) \
-	floatrect.$(OBJEXT) haarfeatures.$(OBJEXT)
+	floatrect.$(OBJEXT) haarfeatures.$(OBJEXT) larank.$(OBJEXT)
 mystruck_OBJECTS = $(am_mystruck_OBJECTS)
 am__DEPENDENCIES_1 =
 mystruck_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -399,11 +399,13 @@ mystruck_SOURCES = \
 	track.h \
 	haarfeature.cc \
 	haarfeature.h \
-	FloatRect.h \
 	floatrect.cc \
 	floatrect.h \
 	haarfeatures.cc \
-	haarfeatures.h
+	haarfeatures.h \
+	larank.cc \
+	larank.h \
+	guassiankernel.h
 
 mystruck_LDFLAGS = 
 mystruck_LDADD = $(MYSTRUCK_LIBS)
@@ -508,6 +510,7 @@ include ./$(DEPDIR)/Config.Po
 include ./$(DEPDIR)/floatrect.Po
 include ./$(DEPDIR)/haarfeature.Po
 include ./$(DEPDIR)/haarfeatures.Po
+include ./$(DEPDIR)/larank.Po
 include ./$(DEPDIR)/main.Po
 include ./$(DEPDIR)/sampler.Po
 include ./$(DEPDIR)/track.Po
