@@ -23,18 +23,22 @@
 #include "cv.h"
 #include "highgui.h"
 #include "Config.h"
+#include "floatrect.h"
+#include "sampler.h"
+#include "larank.h"
 class Track
 {
 public:
 	Config m_config;
-	CvRect m_bb;
+	FloatRect m_bb;
+	LaRank m_learner;
 	Track(Config config); //构造时要把m_initbb传递进来
 	IplImage *c_img; //传递进来的原始图像colorImg
 	IplImage *m_img; //用于存储每次处理的单通道图像
 	IplImage *preprocess(IplImage *src);//转换图片为灰度图
 	void track(IplImage *img); //进行预测的函数，根据前一帧的bb，采样预测
-	void draw(IplImage *img,CvRect m_bb); //根据预测的BoundingBox画出矩形框
-	void UpdateLearner(IplImage *img,CvRect bb); //根据得到的bb，再次进行采样然后更新分类器
+	void draw(IplImage *img,FloatRect m_bb); //根据预测的BoundingBox画出矩形框
+	void UpdateLearner(IplImage *img,FloatRect bb); //根据得到的bb，再次进行采样然后更新分类器
 protected:
 
 private:

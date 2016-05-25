@@ -57,7 +57,7 @@ void TrackFromFile()
 			float scaleX = m_config.width*1.0/img->width; //因为对图像归一化，所以BoundingBox也要按比例缩放
 			float scaleY = m_config.height*1.0/img->height;
 			cout<<scaleX<<endl<<scaleY<<endl;
-			m_config.m_initbb = cvRect(xmin*scaleX,ymin*scaleY,width*scaleX,height*scaleY);
+			m_config.m_initbb = FloatRect(xmin*scaleX,ymin*scaleY,width*scaleX,height*scaleY);
 		}
 		else
 			cout<<"未找到groundTruth数据路径"<<endl;

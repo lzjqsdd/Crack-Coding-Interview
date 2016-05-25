@@ -34,10 +34,12 @@ public:
 
 	FloatRect();
 	FloatRect(float x,float y,float width,float height);
+	FloatRect(const FloatRect& rect);
 	float Overlap(FloatRect &rect2); //计算两个重叠
+	bool isInside(FloatRect &rect);
 	inline float Area() const { return width * height; } //计算面积,用于haar特征归一化	
 	inline void Translate(float tx, float ty) { x += tx; y += ty; } //水平平移x,竖直平移y
-
+	void show();
 
 protected:
 

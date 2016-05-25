@@ -33,7 +33,9 @@ using namespace std;
 class LaRank
 {
 public:
-
+	LaRank ();
+	double Evaluate(const Eigen::VectorXd& x);
+	void Eval(IplImage *img,vector<FloatRect> rects,vector<float>& scores);
 protected:
 
 private:
@@ -55,6 +57,10 @@ private:
 		IplImage * img;
 	};
 
+	HaarFeatures m_features;
+	vector<SupportPattern*> m_sps;
+	vector<SupportVector*> m_svs;
+	GuassianKernel m_kernel;
 	double m_C; //表示KKT中的C
 	
 	Eigen::MatrixXd m_K;
@@ -80,7 +86,6 @@ private:
 	void BudgetMaintenanceRemove();
 
 	double Evaluate(Eigen::VectorXd& x,FloatRect& y);
-};
-
+}; 
 #endif // _LARANK_H_
 

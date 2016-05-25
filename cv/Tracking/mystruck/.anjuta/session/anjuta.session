@@ -3,7 +3,7 @@ Maximized=1
 Geometry=1366x744+0+24
 
 [File Loader]
-Files=../../src/haarfeature.cc#1%%%../../src/haarfeature.h#43%%%../../src/larank.h#75%%%../../src/larank.cc#22%%%../../src/haarfeatures.cc#1%%%../../src/haarfeatures.h#1%%%../../src/guassiankernel.h#28%%%../../src/floatrect.h#22%%%../../src/floatrect.cc#20
+Files=../../src/larank.cc#53%%%../../src/haarfeatures.cc#66%%%../../src/haarfeature.cc#118%%%../../src/track.cc#58%%%../../src/larank.h#35
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n

@@ -26,7 +26,7 @@ class GuassianKernel
 {
 public:
     GuassianKernel(double sigma) : m_sigma(sigma) {}
-	
+	GuassianKernel(){}
     inline double Eval(const Eigen::VectorXd& x1, const Eigen::VectorXd& x2) const
     {   
         return exp(-m_sigma*(x1-x2).squaredNorm());

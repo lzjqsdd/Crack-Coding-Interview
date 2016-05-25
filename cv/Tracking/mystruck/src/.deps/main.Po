@@ -194,7 +194,77 @@ main.o: main.cc /usr/include/stdc-predef.h /usr/include/c++/4.8/iostream \
  /usr/local/opencv/include/opencv2/core/internal.hpp \
  /usr/local/opencv/include/opencv/highgui.h \
  /usr/local/opencv/include/opencv2/highgui/highgui_c.h \
- /usr/local/opencv/include/opencv2/highgui/highgui.hpp track.h Config.h
+ /usr/local/opencv/include/opencv2/highgui/highgui.hpp track.h Config.h \
+ floatrect.h sampler.h larank.h guassiankernel.h Eigen/Core \
+ Eigen/src/Core/util/DisableStupidWarnings.h Eigen/src/Core/util/Macros.h \
+ Eigen/src/Core/util/MKL_support.h /usr/include/c++/4.8/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/functional /usr/include/c++/4.8/climits \
+ Eigen/src/Core/util/Constants.h \
+ Eigen/src/Core/util/ForwardDeclarations.h Eigen/src/Core/util/Meta.h \
+ Eigen/src/Core/util/StaticAssert.h Eigen/src/Core/util/XprHelper.h \
+ Eigen/src/Core/util/Memory.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h Eigen/src/Core/NumTraits.h \
+ Eigen/src/Core/MathFunctions.h Eigen/src/Core/GenericPacketMath.h \
+ Eigen/src/Core/arch/SSE/PacketMath.h \
+ Eigen/src/Core/arch/SSE/MathFunctions.h \
+ Eigen/src/Core/arch/SSE/Complex.h Eigen/src/Core/arch/Default/Settings.h \
+ Eigen/src/Core/Functors.h Eigen/src/Core/DenseCoeffsBase.h \
+ Eigen/src/Core/DenseBase.h Eigen/src/Core/../plugins/BlockMethods.h \
+ Eigen/src/Core/MatrixBase.h \
+ Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h \
+ Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h \
+ Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h \
+ Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h \
+ Eigen/src/Core/EigenBase.h Eigen/src/Core/Assign.h \
+ Eigen/src/Core/util/BlasUtil.h Eigen/src/Core/DenseStorage.h \
+ Eigen/src/Core/NestByValue.h Eigen/src/Core/ForceAlignedAccess.h \
+ Eigen/src/Core/ReturnByValue.h Eigen/src/Core/NoAlias.h \
+ Eigen/src/Core/PlainObjectBase.h Eigen/src/Core/Matrix.h \
+ Eigen/src/Core/Array.h Eigen/src/Core/CwiseBinaryOp.h \
+ Eigen/src/Core/CwiseUnaryOp.h Eigen/src/Core/CwiseNullaryOp.h \
+ Eigen/src/Core/CwiseUnaryView.h Eigen/src/Core/SelfCwiseBinaryOp.h \
+ Eigen/src/Core/Dot.h Eigen/src/Core/StableNorm.h \
+ Eigen/src/Core/MapBase.h Eigen/src/Core/Stride.h Eigen/src/Core/Map.h \
+ Eigen/src/Core/Block.h Eigen/src/Core/VectorBlock.h Eigen/src/Core/Ref.h \
+ Eigen/src/Core/Transpose.h Eigen/src/Core/DiagonalMatrix.h \
+ Eigen/src/Core/Diagonal.h Eigen/src/Core/DiagonalProduct.h \
+ Eigen/src/Core/PermutationMatrix.h Eigen/src/Core/Transpositions.h \
+ Eigen/src/Core/Redux.h Eigen/src/Core/Visitor.h Eigen/src/Core/Fuzzy.h \
+ Eigen/src/Core/IO.h Eigen/src/Core/Swap.h \
+ Eigen/src/Core/CommaInitializer.h Eigen/src/Core/Flagged.h \
+ Eigen/src/Core/ProductBase.h Eigen/src/Core/GeneralProduct.h \
+ Eigen/src/Core/TriangularMatrix.h Eigen/src/Core/SelfAdjointView.h \
+ Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+ Eigen/src/Core/products/Parallelizer.h \
+ Eigen/src/Core/products/CoeffBasedProduct.h \
+ Eigen/src/Core/products/GeneralMatrixVector.h \
+ Eigen/src/Core/products/GeneralMatrixMatrix.h \
+ Eigen/src/Core/SolveTriangular.h \
+ Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+ Eigen/src/Core/products/SelfadjointMatrixVector.h \
+ Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+ Eigen/src/Core/products/SelfadjointProduct.h \
+ Eigen/src/Core/products/SelfadjointRank2Update.h \
+ Eigen/src/Core/products/TriangularMatrixVector.h \
+ Eigen/src/Core/products/TriangularMatrixMatrix.h \
+ Eigen/src/Core/products/TriangularSolverMatrix.h \
+ Eigen/src/Core/products/TriangularSolverVector.h \
+ Eigen/src/Core/BandMatrix.h Eigen/src/Core/CoreIterators.h \
+ Eigen/src/Core/BooleanRedux.h Eigen/src/Core/Select.h \
+ Eigen/src/Core/VectorwiseOp.h Eigen/src/Core/Random.h \
+ Eigen/src/Core/Replicate.h Eigen/src/Core/Reverse.h \
+ Eigen/src/Core/ArrayBase.h \
+ Eigen/src/Core/../plugins/ArrayCwiseUnaryOps.h \
+ Eigen/src/Core/../plugins/ArrayCwiseBinaryOps.h \
+ Eigen/src/Core/ArrayWrapper.h Eigen/src/Core/GlobalFunctions.h \
+ Eigen/src/Core/util/ReenableStupidWarnings.h ../config.h haarfeatures.h \
+ haarfeature.h Eigen/Core
 
 /usr/include/stdc-predef.h:
 
@@ -669,3 +739,241 @@ main.o: main.cc /usr/include/stdc-predef.h /usr/include/c++/4.8/iostream \
 track.h:
 
 Config.h:
+
+floatrect.h:
+
+sampler.h:
+
+larank.h:
+
+guassiankernel.h:
+
+Eigen/Core:
+
+Eigen/src/Core/util/DisableStupidWarnings.h:
+
+Eigen/src/Core/util/Macros.h:
+
+Eigen/src/Core/util/MKL_support.h:
+
+/usr/include/c++/4.8/cerrno:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/4.8/functional:
+
+/usr/include/c++/4.8/climits:
+
+Eigen/src/Core/util/Constants.h:
+
+Eigen/src/Core/util/ForwardDeclarations.h:
+
+Eigen/src/Core/util/Meta.h:
+
+Eigen/src/Core/util/StaticAssert.h:
+
+Eigen/src/Core/util/XprHelper.h:
+
+Eigen/src/Core/util/Memory.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+Eigen/src/Core/NumTraits.h:
+
+Eigen/src/Core/MathFunctions.h:
+
+Eigen/src/Core/GenericPacketMath.h:
+
+Eigen/src/Core/arch/SSE/PacketMath.h:
+
+Eigen/src/Core/arch/SSE/MathFunctions.h:
+
+Eigen/src/Core/arch/SSE/Complex.h:
+
+Eigen/src/Core/arch/Default/Settings.h:
+
+Eigen/src/Core/Functors.h:
+
+Eigen/src/Core/DenseCoeffsBase.h:
+
+Eigen/src/Core/DenseBase.h:
+
+Eigen/src/Core/../plugins/BlockMethods.h:
+
+Eigen/src/Core/MatrixBase.h:
+
+Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:
+
+Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:
+
+Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h:
+
+Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h:
+
+Eigen/src/Core/EigenBase.h:
+
+Eigen/src/Core/Assign.h:
+
+Eigen/src/Core/util/BlasUtil.h:
+
+Eigen/src/Core/DenseStorage.h:
+
+Eigen/src/Core/NestByValue.h:
+
+Eigen/src/Core/ForceAlignedAccess.h:
+
+Eigen/src/Core/ReturnByValue.h:
+
+Eigen/src/Core/NoAlias.h:
+
+Eigen/src/Core/PlainObjectBase.h:
+
+Eigen/src/Core/Matrix.h:
+
+Eigen/src/Core/Array.h:
+
+Eigen/src/Core/CwiseBinaryOp.h:
+
+Eigen/src/Core/CwiseUnaryOp.h:
+
+Eigen/src/Core/CwiseNullaryOp.h:
+
+Eigen/src/Core/CwiseUnaryView.h:
+
+Eigen/src/Core/SelfCwiseBinaryOp.h:
+
+Eigen/src/Core/Dot.h:
+
+Eigen/src/Core/StableNorm.h:
+
+Eigen/src/Core/MapBase.h:
+
+Eigen/src/Core/Stride.h:
+
+Eigen/src/Core/Map.h:
+
+Eigen/src/Core/Block.h:
+
+Eigen/src/Core/VectorBlock.h:
+
+Eigen/src/Core/Ref.h:
+
+Eigen/src/Core/Transpose.h:
+
+Eigen/src/Core/DiagonalMatrix.h:
+
+Eigen/src/Core/Diagonal.h:
+
+Eigen/src/Core/DiagonalProduct.h:
+
+Eigen/src/Core/PermutationMatrix.h:
+
+Eigen/src/Core/Transpositions.h:
+
+Eigen/src/Core/Redux.h:
+
+Eigen/src/Core/Visitor.h:
+
+Eigen/src/Core/Fuzzy.h:
+
+Eigen/src/Core/IO.h:
+
+Eigen/src/Core/Swap.h:
+
+Eigen/src/Core/CommaInitializer.h:
+
+Eigen/src/Core/Flagged.h:
+
+Eigen/src/Core/ProductBase.h:
+
+Eigen/src/Core/GeneralProduct.h:
+
+Eigen/src/Core/TriangularMatrix.h:
+
+Eigen/src/Core/SelfAdjointView.h:
+
+Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+
+Eigen/src/Core/products/Parallelizer.h:
+
+Eigen/src/Core/products/CoeffBasedProduct.h:
+
+Eigen/src/Core/products/GeneralMatrixVector.h:
+
+Eigen/src/Core/products/GeneralMatrixMatrix.h:
+
+Eigen/src/Core/SolveTriangular.h:
+
+Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
+
+Eigen/src/Core/products/SelfadjointMatrixVector.h:
+
+Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+
+Eigen/src/Core/products/SelfadjointProduct.h:
+
+Eigen/src/Core/products/SelfadjointRank2Update.h:
+
+Eigen/src/Core/products/TriangularMatrixVector.h:
+
+Eigen/src/Core/products/TriangularMatrixMatrix.h:
+
+Eigen/src/Core/products/TriangularSolverMatrix.h:
+
+Eigen/src/Core/products/TriangularSolverVector.h:
+
+Eigen/src/Core/BandMatrix.h:
+
+Eigen/src/Core/CoreIterators.h:
+
+Eigen/src/Core/BooleanRedux.h:
+
+Eigen/src/Core/Select.h:
+
+Eigen/src/Core/VectorwiseOp.h:
+
+Eigen/src/Core/Random.h:
+
+Eigen/src/Core/Replicate.h:
+
+Eigen/src/Core/Reverse.h:
+
+Eigen/src/Core/ArrayBase.h:
+
+Eigen/src/Core/../plugins/ArrayCwiseUnaryOps.h:
+
+Eigen/src/Core/../plugins/ArrayCwiseBinaryOps.h:
+
+Eigen/src/Core/ArrayWrapper.h:
+
+Eigen/src/Core/GlobalFunctions.h:
+
+Eigen/src/Core/util/ReenableStupidWarnings.h:
+
+../config.h:
+
+haarfeatures.h:
+
+haarfeature.h:
+
+Eigen/Core:

@@ -31,7 +31,7 @@ public:
 	vector<HaarFeature> getHaarFeature(); //计算每个sample的Haar特征
 
 	Eigen::VectorXd& EvalSingleSample(IplImage *img,FloatRect rect); //计算192特征，保存到m_featVec;
-
+	void EvalAllSample(IplImage *img,vector<FloatRect> rects, vector<Eigen::VectorXd>& featVecs);
 };
 
 #endif // _HAARFEATURES_H_

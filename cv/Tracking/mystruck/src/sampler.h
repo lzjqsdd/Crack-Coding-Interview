@@ -32,9 +32,9 @@ class Sampler
 {
 public:
 	//按照极坐标采样,返回一系列的矩形位置
-	vector<FloatRect> RaidalSamples(FloatRect TSample,int r,int nr,int nt); 
+	static vector<FloatRect> RaidalSamples(FloatRect TSample,int r,int nr,int nt); 
 	//按照上下左右在一定圆内采样。
-	vector<FloatRect> CircleSamples(FloatRect TSample,int r);
+	static vector<FloatRect> CircleSamples(FloatRect TSample,int r);
 protected:
 
 private:

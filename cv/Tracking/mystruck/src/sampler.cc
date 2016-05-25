@@ -55,5 +55,6 @@ vector<FloatRect> Sampler::CircleSamples(FloatRect TSample,int r)
 			sample.x = TSample.x+ix;
 			sample.y = TSample.y+iy;
 			samples.push_back(sample);
-		}   
+		} 
+	return samples;
 }   

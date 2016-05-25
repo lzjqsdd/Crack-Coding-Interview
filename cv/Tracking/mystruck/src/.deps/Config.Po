@@ -188,7 +188,7 @@ Config.o: Config.cpp /usr/include/stdc-predef.h Config.h \
  /usr/include/c++/4.8/deque /usr/include/c++/4.8/bits/stl_deque.h \
  /usr/include/c++/4.8/bits/deque.tcc \
  /usr/local/opencv/include/opencv2/legacy/compat.hpp \
- /usr/local/opencv/include/opencv2/core/internal.hpp
+ /usr/local/opencv/include/opencv2/core/internal.hpp floatrect.h
 
 /usr/include/stdc-predef.h:
 
@@ -645,3 +645,5 @@ Config.h:
 /usr/local/opencv/include/opencv2/legacy/compat.hpp:
 
 /usr/local/opencv/include/opencv2/core/internal.hpp:
+
+floatrect.h:

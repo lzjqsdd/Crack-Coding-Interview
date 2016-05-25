@@ -34,6 +34,16 @@ FloatRect::FloatRect(float x,float y,float width,float height)
 	this->maxy = y+height;
 }
 
+FloatRect::FloatRect(const FloatRect& rect)
+{
+	this->x = rect.x;
+	this->y = rect.y;
+	this->width = rect.width;
+	this->height = rect.height;
+	this->maxx = rect.maxx;
+	this->maxy = rect.maxy;
+}
+
 float FloatRect::Overlap(FloatRect &rect2) //计算两个重叠
 {
 	float x0 = max(x,rect2.x);
@@ -45,5 +55,16 @@ float FloatRect::Overlap(FloatRect &rect2) //计算两个重叠
     
     float areaInt = (x1-x0)*(y1-y0);
     return areaInt/((float)Area()+(float)rect2.Area()-areaInt);
+}
 
+bool FloatRect::isInside (FloatRect &rect)
+{
+	if(x>=rect.x&&y>=rect.y&&maxx<=rect.maxx&&maxy<=rect.maxy)
+		return true;
+	return false;
+}
+
+void FloatRect::show()
+{
+	cout<<"xmin:"<<x<<"\t"<<"ymin:"<<y<<"\t"<<"xmax:"<<maxx<<"\t"<<"ymax:"<<maxy<<endl;
 }

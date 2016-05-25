@@ -115,14 +115,17 @@ float HaarFeature::Eval(IplImage *image,FloatRect roi)
 		                           );
 		value += m_weights[i]*sum(image,roi);
 	}
+	//cout<<"value:"<<value<<endl;
 	return value / (m_factor*roi.Area()*m_bb.Area());
 }
 
 
 int HaarFeature::sum(IplImage *img,FloatRect rect)
 {
-	return cvGet2D(img,rect.x,rect.y).val[0]+
-		cvGet2D(img,rect.x+rect.width,rect.y+rect.height).val[0] - 
-		cvGet2D(img,rect.x,rect.y+rect.height).val[0] - 
-		cvGet2D(img,rect.x+rect.width,rect.y).val[0];
+	assert(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height);
+	int result = cvGet2D(img,rect.y,rect.x).val[0]+
+		cvGet2D(img,rect.maxy,rect.maxx).val[0] - 
+		cvGet2D(img,rect.maxy,rect.x).val[0] - 
+		cvGet2D(img,rect.y,rect.maxx).val[0];
+	return result;
 }

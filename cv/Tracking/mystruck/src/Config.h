@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "cv.h"
+#include "floatrect.h"
 using namespace std;
 //读取配置文件
 
@@ -15,6 +16,7 @@ class Config
 		string imgpath; //训练图片描述文件的位置
 		string gtpath; //GroudTruth的位置
 		int budgetSize;
-		CvRect m_initbb;//初始BoundBoxing的位置
+		FloatRect m_initbb;//初始BoundBoxing的位置
 		void init();
+		int searchR;//采样半径
 };

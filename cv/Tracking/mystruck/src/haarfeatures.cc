@@ -47,10 +47,22 @@ vector<HaarFeature> HaarFeatures::getHaarFeature()
 //计算单一样本的192维特征，执行该函数之前应该先得到结构性的向量m_features,再利用每一维度计算。
 Eigen::VectorXd& HaarFeatures::EvalSingleSample(IplImage *img,FloatRect rect)
 {
-	vector<HaarFeature> m_features; //存放192维向量(HaarFeature类对象)
+	 //存放192维向量(HaarFeature类对象)
+	vector<HaarFeature> m_features = getHaarFeature();
+	m_featVec = VectorXd::Zero(192);
 	for(int i=0;i<192;i++)
 	{
 		m_featVec[i] = m_features[i].Eval (img,rect);
+	}
+	return m_featVec;
+}
+
+void HaarFeatures::EvalAllSample(IplImage *img,vector<FloatRect> rects,vector<Eigen::VectorXd>& featVecs)
+{
+	featVecs.resize(rects.size());
+	for(int i=0;i<rects.size();i++)
+	{
+		featVecs[i] = EvalSingleSample (img,rects[i]);
 	}
 }
 

@@ -13,4 +13,5 @@ void Config::init()
 	imgpath = "./train/girl/girl_frames.txt";
 	gtpath = "./train/girl/girl_gt.txt";
 	budgetSize = 100;
+	searchR = 30;
 }
