@@ -26,7 +26,9 @@ mystruck_SOURCES = \
 	haarfeature.h \
 	FloatRect.h \
 	floatrect.cc \
-	floatrect.h
+	floatrect.h \
+	haarfeatures.cc \
+	haarfeatures.h
 
 mystruck_LDFLAGS = 
 

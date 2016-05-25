@@ -94,7 +94,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_mystruck_OBJECTS = main.$(OBJEXT) Config.$(OBJEXT) \
 	sampler.$(OBJEXT) track.$(OBJEXT) haarfeature.$(OBJEXT) \
-	floatrect.$(OBJEXT)
+	floatrect.$(OBJEXT) haarfeatures.$(OBJEXT)
 mystruck_OBJECTS = $(am_mystruck_OBJECTS)
 am__DEPENDENCIES_1 =
 mystruck_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -401,7 +401,9 @@ mystruck_SOURCES = \
 	haarfeature.h \
 	FloatRect.h \
 	floatrect.cc \
-	floatrect.h
+	floatrect.h \
+	haarfeatures.cc \
+	haarfeatures.h
 
 mystruck_LDFLAGS = 
 mystruck_LDADD = $(MYSTRUCK_LIBS)
@@ -505,6 +507,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Config.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/floatrect.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/haarfeature.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/haarfeatures.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sampler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/track.Po@am__quote@

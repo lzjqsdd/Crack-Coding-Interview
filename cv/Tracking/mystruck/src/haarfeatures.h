@@ -1,6 +1,6 @@
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
 /*
- * haarfeature.h
+ * haarfeatures.h
  * Copyright (C) 2016 lzjqsdd <lzjqsdd@163.com>
  *
  * mystruck is free software: you can redistribute it and/or modify it
@@ -17,32 +17,22 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _HAARFEATURE_H_
-#define _HAARFEATURE_H_
-
-#include "cv.h"
-#include "highgui.h"
-#include "floatrect.h"
-#include <iostream>
-#include <vector>
+#ifndef _HAARFEATURES_H_
+#define _HAARFEATURES_H_
+#include "haarfeature.h"
 #include <Eigen/Core>
-using namespace std;
 using namespace Eigen;
-
-class HaarFeature
+//这个类主要表示对于某一个样本的haar的192为特征的值。
+class HaarFeatures
 {
 public:
-	HaarFeature(FloatRect bb,int type); //type表示不同的haar特征
-	~HaarFeature();
-	
-	FloatRect m_bb;
-	vector<FloatRect> m_rects; //因为这个变量存放的是每个样本的归一的值，用浮点表示.
-	vector<float> m_weights; //存放每个type的haar中小格子的权重。
-	float m_factor; //表示某一个type的特征的比重
-	float Eval(IplImage *image,FloatRect roi); //其实是计算每个类型的特征的值.
-	int sum(IplImage *img,FloatRect rect);
+//	vector<HaarFeature> m_features; //存放192维向量(HaarFeature类对象)
+	Eigen::VectorXd m_featVec; //用来存放最终算好的192维Haar特征（计算的每一维的值），
+	vector<HaarFeature> getHaarFeature(); //计算每个sample的Haar特征
+
+	Eigen::VectorXd& EvalSingleSample(IplImage *img,FloatRect rect); //计算192特征，保存到m_featVec;
 
 };
 
-#endif // _HAARFEATURE_H_
+#endif // _HAARFEATURES_H_
 
