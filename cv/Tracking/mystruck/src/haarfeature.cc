@@ -122,10 +122,18 @@ float HaarFeature::Eval(IplImage *image,FloatRect roi)
 
 int HaarFeature::sum(IplImage *img,FloatRect rect)
 {
-	assert(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height);
+//	assert(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height);
+	if(!(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height))
+	{
+		rect.show();
+		cout<<"img:width->"<<img->width<<" height->"<<img->height<<endl;
+		cvShowImage("test",img);
+		cvWaitKey(0);
+	}
 	int result = cvGet2D(img,rect.y,rect.x).val[0]+
 		cvGet2D(img,rect.maxy,rect.maxx).val[0] - 
 		cvGet2D(img,rect.maxy,rect.x).val[0] - 
 		cvGet2D(img,rect.y,rect.maxx).val[0];
+	//cout<<result<<endl;
 	return result;
 }

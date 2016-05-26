@@ -26,6 +26,7 @@ vector<FloatRect> Sampler::RaidalSamples(FloatRect TSample,int r,int nr,int nt)
 	samples.push_back(TSample); //先加入正样本（中心位置）
 	float rstep = (float)r/nr; //极方向步长
 	float tstep = (float)M_PI/nt; //旋转角度步长
+	//TSample.show ();
 	FloatRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
 	for(int ir=1;ir<=nr;ir++)
 	{
@@ -39,6 +40,7 @@ vector<FloatRect> Sampler::RaidalSamples(FloatRect TSample,int r,int nr,int nt)
 			samples.push_back(sample);
 		}
 	}
+	return samples;
 }
 
 

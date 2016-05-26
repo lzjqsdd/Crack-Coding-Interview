@@ -36,12 +36,12 @@ FloatRect::FloatRect(float x,float y,float width,float height)
 
 FloatRect::FloatRect(const FloatRect& rect)
 {
-	this->x = rect.x;
-	this->y = rect.y;
-	this->width = rect.width;
-	this->height = rect.height;
-	this->maxx = rect.maxx;
-	this->maxy = rect.maxy;
+	x = rect.x;
+	y = rect.y;
+	width = rect.width;
+	height = rect.height;
+	maxx = rect.maxx;
+	maxy = rect.maxy;
 }
 
 float FloatRect::Overlap(FloatRect &rect2) //计算两个重叠

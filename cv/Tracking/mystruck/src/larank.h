@@ -78,7 +78,7 @@ private:
 	void ProcessOld(); //从以往的支持向量中随机选择作为正样本
 	void Optimize();
 
-	void AddSupportVector(SupportPattern *x,int y,double g);
+	int AddSupportVector(SupportPattern *x,int y,double g);
 	void RemoveSupportVector(int ind);
 	void RemoveSupportVectors(int ind1,int ind2);
 	void SwapSupportVectors(int ind1,int ind2);

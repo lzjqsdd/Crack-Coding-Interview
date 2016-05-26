@@ -56,7 +56,7 @@ void TrackFromFile()
 			sscanf(gtdata.c_str(),"%f\t%f\t%f\t%f",&xmin,&ymin,&width,&height);
 			float scaleX = m_config.width*1.0/img->width; //因为对图像归一化，所以BoundingBox也要按比例缩放
 			float scaleY = m_config.height*1.0/img->height;
-			cout<<scaleX<<endl<<scaleY<<endl;
+			//cout<<scaleX<<endl<<scaleY<<endl;
 			m_config.m_initbb = FloatRect(xmin*scaleX,ymin*scaleY,width*scaleX,height*scaleY);
 		}
 		else
@@ -64,6 +64,7 @@ void TrackFromFile()
 
 
 		Track tracker(m_config);
+		tracker.Initialise (tracker.preprocess (img),m_config.m_initbb);
 		
         while (getline( myfile, filename ))
         {
@@ -71,7 +72,7 @@ void TrackFromFile()
             img = cvLoadImage(imgpath.c_str());
             if(img==NULL) break;
 			tracker.track (img); //传递读取的原始图片
-            cvWaitKey(0);
+            cvWaitKey(10);
         }
         myfile.close();
     }

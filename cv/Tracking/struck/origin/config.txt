@@ -1,8 +1,8 @@
 # quiet mode disables all visual output (for experiments).
-quietMode = 1
+quietMode = 0
 
 # debug mode enables additional drawing and visualization.
-debugMode = 0
+debugMode = 1
 
 # base path for video sequences.
 sequenceBasePath = sequences

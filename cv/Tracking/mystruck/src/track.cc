@@ -59,7 +59,7 @@ void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,�
 	if(maxind!=-1) //如果存在最大的
 	{
 		m_bb = keptRects[maxind];
-		UpdateLearner(src);
+		UpdateLearner(m_img);
 	}
 	draw(c_img,m_bb);
 }
@@ -94,6 +94,7 @@ void Track::draw(IplImage *img,FloatRect m_bb)
 void Track::UpdateLearner(IplImage *img)
 {
 	vector<FloatRect> rects = Sampler::RaidalSamples(m_bb,2*m_config.searchR,5,16);
+	//cout<<"updateLearner"<<rects.size()<<endl;
 	vector<FloatRect> keptRects; //去除不合理的rect之后的
 	keptRects.push_back(rects[0]);
 
@@ -104,6 +105,5 @@ void Track::UpdateLearner(IplImage *img)
 		if(rects[i].isInside (imgRect))
 			keptRects.push_back(rects[i]);
 	}
-
 	m_learner.Update(img,keptRects,0);
 }
