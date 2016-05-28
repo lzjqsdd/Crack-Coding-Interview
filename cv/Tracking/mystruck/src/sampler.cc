@@ -25,7 +25,7 @@ vector<FloatRect> Sampler::RaidalSamples(FloatRect TSample,int r,int nr,int nt)
 	vector<FloatRect> samples;
 	samples.push_back(TSample); //先加入正样本（中心位置）
 	float rstep = (float)r/nr; //极方向步长
-	float tstep = (float)M_PI/nt; //旋转角度步长
+	float tstep = 2*(float)M_PI/nt; //旋转角度步长
 	//TSample.show ();
 	FloatRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
 	for(int ir=1;ir<=nr;ir++)
@@ -49,13 +49,13 @@ vector<FloatRect> Sampler::CircleSamples(FloatRect TSample,int r)
 	vector<FloatRect> samples;
 	samples.push_back(TSample); //先加入正样本（中心位置）
 	FloatRect sample(TSample); //其他采样的大小,左上角可变，宽高和TSample一致
-	for(int ix = -r;ix<=r;ix++)
-		for(int iy = -r;iy<=r;iy++)
+	for(int iy = -r;iy<=r;iy++)
+		for(int ix = -r;ix<=r;ix++)
 		{
 			if(ix*ix+iy*iy > r*r) continue; //不在圆内
 			if(ix==0&&iy==0) continue;//在中心处，已经加入
-			sample.x = TSample.x+ix;
-			sample.y = TSample.y+iy;
+			sample.x = (int)TSample.x+ix;
+			sample.y = (int)TSample.y+iy;
 			samples.push_back(sample);
 		} 
 	return samples;

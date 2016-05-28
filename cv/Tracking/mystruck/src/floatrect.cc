@@ -64,7 +64,17 @@ bool FloatRect::isInside (FloatRect &rect)
 	return false;
 }
 
+void FloatRect::ToInt()
+{
+	x = (int)x;
+	y = (int)y;
+	width = (int)width;
+	height = (int)height;
+	maxx = x+width;
+	maxy = y+height;
+}
+
 void FloatRect::show()
 {
-	cout<<"xmin:"<<x<<"\t"<<"ymin:"<<y<<"\t"<<"xmax:"<<maxx<<"\t"<<"ymax:"<<maxy<<endl;
+	cout<<"xmin:"<<x<<"\t"<<"ymin:"<<y<<"\t"<<"width:"<<width<<"\t"<<"height:"<<height<<endl;
 }

@@ -1,17 +1,17 @@
 [Anjuta]
 Maximized=1
-Geometry=1680x1026+0+24
-
-[File Loader]
-Files=../../src/track.cc#62%%%../../src/floatrect.cc#51%%%../../src/larank.cc#45%%%../../src/sampler.cc#29%%%../../src/floatrect.h#36%%%../../src/haarfeatures.cc#60%%%../../src/haarfeature.cc#107%%%../../src/main.cc#68
-
-[Document Manager]
-bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+Geometry=1366x744+0+24
 
 [Execution]
 Program uri=../../src/mystruck
 Run in terminal=2
 Working directories=../../../mystruck
+
+[File Loader]
+Files=../../src/haarfeature.cc#116%%%../../src/haarfeature.h#42%%%../../src/haarfeatures.h#35%%%../../src/haarfeatures.cc#65%%%../../src/larank.cc#47%%%../../src/track.cc#62%%%../../src/larank.h#61%%%../../src/main.cc#1%%%../../src/track.h#1
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
 [Project Manager]
 Shortcut=mystruck//src//mystruck

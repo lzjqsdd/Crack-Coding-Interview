@@ -26,6 +26,8 @@
 #include <iostream>
 #include <vector>
 #include <Eigen/Core>
+
+using namespace cv;
 using namespace std;
 using namespace Eigen;
 
@@ -39,8 +41,10 @@ public:
 	vector<FloatRect> m_rects; //因为这个变量存放的是每个样本的归一的值，用浮点表示.
 	vector<float> m_weights; //存放每个type的haar中小格子的权重。
 	float m_factor; //表示某一个type的特征的比重
-	float Eval(IplImage *image,FloatRect roi); //其实是计算每个类型的特征的值.
-	int sum(IplImage *img,FloatRect rect);
+//	float Eval(IplImage *image,FloatRect roi); //其实是计算每个类型的特征的值.image应该传递积分图
+	float Eval(Mat& IntegralImage,FloatRect roi); //其实是计算每个类型的特征的值.image应该传递积分图
+	//int sum(IplImage *img,FloatRect rect); //这里的img应该为积分图
+	int sum(Mat& m_integralImages,FloatRect rect); //这里的img应该为积分图
 
 };
 

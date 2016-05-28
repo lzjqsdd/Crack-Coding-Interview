@@ -20,9 +20,15 @@
 #include "haarfeatures.h"
 
 //这个函数计算一个样本的所有的Haar特征存放到一个向量中,192维，但是每个都是一个HaarFeature。
+
+HaarFeatures::HaarFeatures()
+{
+	getHaarFeature();
+}
+
 vector<HaarFeature> HaarFeatures::getHaarFeature()
 {
-	vector<HaarFeature> m_features;
+//	vector<HaarFeature> m_features;
 	m_features.clear();
 	float x[] = {0.2f, 0.4f, 0.6f, 0.8f};
 	float y[] = {0.2f, 0.4f, 0.6f, 0.8f};
@@ -45,10 +51,9 @@ vector<HaarFeature> HaarFeatures::getHaarFeature()
 }
 
 //计算单一样本的192维特征，执行该函数之前应该先得到结构性的向量m_features,再利用每一维度计算。
-Eigen::VectorXd& HaarFeatures::EvalSingleSample(IplImage *img,FloatRect rect)
+Eigen::VectorXd& HaarFeatures::EvalSingleSample(Mat& img,FloatRect rect)
 {
 	 //存放192维向量(HaarFeature类对象)
-	vector<HaarFeature> m_features = getHaarFeature();
 	m_featVec = VectorXd::Zero(192);
 	for(int i=0;i<192;i++)
 	{
@@ -59,11 +64,27 @@ Eigen::VectorXd& HaarFeatures::EvalSingleSample(IplImage *img,FloatRect rect)
 
 void HaarFeatures::EvalAllSample(IplImage *img,vector<FloatRect> rects,vector<Eigen::VectorXd>& featVecs)
 {
+	cout<<"Feats size:"<<rects.size()<<endl;
+//	IplImage *integralImg = cvCreateImage(cvSize(img->width+1,img->height+1),IPL_DEPTH_32F,img->nChannels); 
+//	cvIntegral(image,integralImg); //创建积分图
+	Mat integralImg;
+	getIntegralImg(img,integralImg);
+//	imshow("integeal",integralImg);
+//	cvWaitKey(0);
 	featVecs.resize(rects.size());
 	for(int i=0;i<rects.size();i++)
 	{
-		featVecs[i] = EvalSingleSample (img,rects[i]);
+//		rects[i].show();
+		featVecs[i] = EvalSingleSample (integralImg,rects[i]);
+//		cout<<"featVect"<<i<<" val: "<<featVecs[i][0]<<endl;
 	}
 }
 
+
+void HaarFeatures::getIntegralImg(IplImage *img,Mat &dst)
+{
+	Mat image = Mat(img);
+	dst = Mat(img->height+1,img->width+1,CV_32SC1);
+	integral(image,dst);
+}
 

@@ -21,17 +21,24 @@
 #define _HAARFEATURES_H_
 #include "haarfeature.h"
 #include <Eigen/Core>
+#include "cv.h"
+#include "highgui.h"
 using namespace Eigen;
+using namespace cv;
 //这个类主要表示对于某一个样本的haar的192为特征的值。
 class HaarFeatures
 {
 public:
+	HaarFeatures();
 //	vector<HaarFeature> m_features; //存放192维向量(HaarFeature类对象)
 	Eigen::VectorXd m_featVec; //用来存放最终算好的192维Haar特征（计算的每一维的值），
+	vector<HaarFeature> m_features;
 	vector<HaarFeature> getHaarFeature(); //计算每个sample的Haar特征
 
-	Eigen::VectorXd& EvalSingleSample(IplImage *img,FloatRect rect); //计算192特征，保存到m_featVec;
+	//Eigen::VectorXd& EvalSingleSample(IplImage *img,FloatRect rect); //计算192特征，保存到m_featVec;
+	Eigen::VectorXd& EvalSingleSample(Mat& img,FloatRect rect); //计算192特征，保存到m_featVec;
 	void EvalAllSample(IplImage *img,vector<FloatRect> rects, vector<Eigen::VectorXd>& featVecs);
+	void getIntegralImg(IplImage *img,Mat& dst);
 };
 
 #endif // _HAARFEATURES_H_

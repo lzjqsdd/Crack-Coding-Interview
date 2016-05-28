@@ -21,12 +21,12 @@
 
 
 static const int kTileSize = 30;
-static const int kMaxSVs = 2000;
+//static const int kMaxSVs = 2000;
 LaRank::LaRank()
 {
 	m_C = 100;
 	m_kernel = GuassianKernel(0.2);
-	m_K = MatrixXd::Zero(100,100);
+	m_K = MatrixXd::Zero(102,102);
 }
 
 double LaRank::Evaluate(const Eigen::VectorXd& x)
@@ -55,8 +55,9 @@ void LaRank::Eval(IplImage *img,vector<FloatRect> rects,vector<float>& scores)
 		FloatRect y(rects[i]);
 		y.Translate (-center.x,-center.y);
 		scores[i] = Evaluate(fvs[i]);
-		//cout<<"scores"<<i<<":"<<scores[i]<<endl;
+	//	cout<<"scores"<<i<<":"<<scores[i]<<"\t";
 	}
+	cout<<endl;
 }
 
 pair<int,double> LaRank::MinGradient(int ind)
@@ -73,6 +74,7 @@ pair<int,double> LaRank::MinGradient(int ind)
 			minGrad.second = grad;
 		}
 	}
+//	cout<<"minGrad"<<minGrad.second<<endl;
 	return minGrad;
 }
 
@@ -103,6 +105,7 @@ void LaRank::Update(IplImage *img,vector<FloatRect> rects, int y)
 		Reprocess();
 		BudgetMaintenance();
 	}
+	cout<<"here!!!!!!!!!!!"<<endl;
 }
 
 
@@ -363,7 +366,7 @@ void LaRank::SMOStep(int ipos, int ineg)
 	//cout << "SMO: gpos:" << svp->g << " gneg:" << svn->g << endl;
 	if ((svp->g - svn->g) < 1e-5)
 	{
-		cout << "SMO: skipping" << endl;	
+//		cout << "SMO: skipping" << endl;	
 	}
 	else
 	{

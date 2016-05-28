@@ -40,6 +40,7 @@ public:
 	inline float Area() const { return width * height; } //计算面积,用于haar特征归一化	
 	inline void Translate(float tx, float ty) { x += tx; y += ty; } //水平平移x,竖直平移y
 	void show();
+	void ToInt();
 
 protected:
 

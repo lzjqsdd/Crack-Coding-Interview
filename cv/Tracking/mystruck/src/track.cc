@@ -24,7 +24,7 @@ Track::Track(Config config)
 {
 	m_config = config; //传递进来的conif
 	m_bb = config.m_initbb;
-	m_learner = LaRank();
+//	m_learner = LaRank();
 }
 void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,参数为3通道原始图像
 {
@@ -34,6 +34,7 @@ void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,�
 	vector<FloatRect> rects = Sampler::CircleSamples(m_bb,m_config.searchR);
 	//step3:去除越界的位置
 	vector<FloatRect> keptRects;
+	keptRects.reserve(rects.size());
 	FloatRect srcRect = FloatRect(0,0,m_img->width,m_img->height);
 	for(int i=0;i<rects.size();i++)
 	{
@@ -44,7 +45,6 @@ void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,�
 	//step3:对剩余采样的每个样本计算得分
 	vector<float> scores;
 	m_learner.Eval (m_img,keptRects,scores); //得到不同采样位置的分数
-	cout<<"scores.size:"<<scores.size()<<endl;
 	//step4:选择最大的那个
 	float maxscore = FLT_MIN;
 	int maxind = -1; //记录最大的那个框框的编号
@@ -59,6 +59,7 @@ void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,�
 	if(maxind!=-1) //如果存在最大的
 	{
 		m_bb = keptRects[maxind];
+//		cout<<"track score: "<<maxscore<<endl;
 		UpdateLearner(m_img);
 	}
 	draw(c_img,m_bb);
@@ -68,6 +69,7 @@ void Track::track(IplImage *src) //计算当前帧目标的最可能的位置,�
 void Track::Initialise (IplImage *img,FloatRect bb)
 {
 	m_bb = FloatRect(bb.x,bb.y,bb.width,bb.height);
+	m_bb.ToInt();
 	UpdateLearner(img);
 }
 
@@ -94,7 +96,6 @@ void Track::draw(IplImage *img,FloatRect m_bb)
 void Track::UpdateLearner(IplImage *img)
 {
 	vector<FloatRect> rects = Sampler::RaidalSamples(m_bb,2*m_config.searchR,5,16);
-	//cout<<"updateLearner"<<rects.size()<<endl;
 	vector<FloatRect> keptRects; //去除不合理的rect之后的
 	keptRects.push_back(rects[0]);
 
@@ -105,5 +106,6 @@ void Track::UpdateLearner(IplImage *img)
 		if(rects[i].isInside (imgRect))
 			keptRects.push_back(rects[i]);
 	}
+	cout<<keptRects.size()<<"samples"<<endl;
 	m_learner.Update(img,keptRects,0);
 }

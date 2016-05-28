@@ -9,8 +9,7 @@
  * (at your option) any later version.
  * 
  * mystruck is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License along
@@ -104,25 +103,27 @@ HaarFeature::~HaarFeature()
 
 
 //这个函数计算每个样本的所有的haar特征的值（只是比例）
-float HaarFeature::Eval(IplImage *image,FloatRect roi)
+float HaarFeature::Eval(Mat& image,FloatRect roi)
 {
 	float value = 0.f;
 	for (int i = 0; i < (int)m_rects.size(); ++i)
 	{
 		FloatRect r  = m_rects[i];
-		CvRect sampleRect = cvRect((int)(roi.x+r.x*roi.width+0.5f),(int)(roi.y+r.y*roi.height+0.5f),
+		FloatRect sampleRect = FloatRect((int)(roi.x+r.x*roi.width+0.5f),(int)(roi.y+r.y*roi.height+0.5f),
 		                           (int)(r.width*roi.width),(int)(r.height*roi.height)
 		                           );
-		value += m_weights[i]*sum(image,roi);
+		value += m_weights[i]*sum(image,sampleRect);
+//		cout<<sum(image,sampleRect)<<endl;
 	}
-	//cout<<"value:"<<value<<endl;
+//	cout<<"m_factor:"<<m_factor<<"\troi.Area:"<<roi.Area()<<"\tm_bb.Area:"<<m_bb.Area()<<endl;
 	return value / (m_factor*roi.Area()*m_bb.Area());
 }
 
 
-int HaarFeature::sum(IplImage *img,FloatRect rect)
+int HaarFeature::sum(Mat &m_integralImages,FloatRect rRect)
 {
-//	assert(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height);
+/*
+	assert(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height);
 	if(!(rect.x>= 0 && rect.y>= 0 && rect.maxx<= img->width && rect.y <= img->height))
 	{
 		rect.show();
@@ -136,4 +137,16 @@ int HaarFeature::sum(IplImage *img,FloatRect rect)
 		cvGet2D(img,rect.y,rect.maxx).val[0];
 	//cout<<result<<endl;
 	return result;
+*/
+
+//	cout<<"sum rect";
+//	rRect.show();
+	if(!(rRect.x >= 0 && rRect.y >= 0 && rRect.maxx <= m_integralImages.cols-1 && rRect.maxy <= m_integralImages.rows-1))
+		rRect.show();
+	//assert(rRect.x >= 0 && rRect.y >= 0 && rRect.maxx <= m_integralImages.cols-1 && rRect.maxy <= m_integralImages.rows-1);
+	return m_integralImages.at<int>(rRect.y, rRect.x) +
+			m_integralImages.at<int>(rRect.maxy, rRect.maxx) -
+			m_integralImages.at<int>(rRect.maxy, rRect.x) -
+			m_integralImages.at<int>(rRect.y, rRect.maxx);
 }
+

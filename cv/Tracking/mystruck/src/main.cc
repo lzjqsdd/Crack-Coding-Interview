@@ -64,15 +64,16 @@ void TrackFromFile()
 
 
 		Track tracker(m_config);
-		tracker.Initialise (tracker.preprocess (img),m_config.m_initbb);
+		tracker.Initialise (tracker.preprocess (img),m_config.m_initbb); //用第一帧参数来初始化数据 
 		
         while (getline( myfile, filename ))
         {
 			string imgpath = m_config.basepath+filename;
+			cout<<imgpath<<endl;
             img = cvLoadImage(imgpath.c_str());
             if(img==NULL) break;
 			tracker.track (img); //传递读取的原始图片
-            cvWaitKey(10);
+            cvWaitKey(30);
         }
         myfile.close();
     }
