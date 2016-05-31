@@ -13,6 +13,6 @@ HOG:Histogram of Oriented Gradient
 ####Tracking
 Struck:Struct Output SVM with Kernel
 
-###DNN(流行的申请网络的算法)
+###DNN(流行的神经网络的算法)
 待加入
 
