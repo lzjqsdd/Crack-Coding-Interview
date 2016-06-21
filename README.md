@@ -5,13 +5,14 @@
 
 ##目前实现的List
 ###BaseAlgorithm(机器学习基本算法)
-待加入
+- K-Means
+- 卡尔曼滤波
 
 ###CV(计算机视觉相关算法)
-HOG:Histogram of Oriented Gradient
+- HOG:Histogram of Oriented Gradient
 
 ####Tracking
-Struck:Struct Output SVM with Kernel
+- Struck:Struct Output SVM with Kernel
 
 ###DNN(流行的神经网络的算法)
 待加入

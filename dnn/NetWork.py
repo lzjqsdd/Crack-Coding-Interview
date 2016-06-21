@@ -12,4 +12,9 @@ class Network(object):
 	def sigmoid(z):
 		return 1.0/(1.0+n)
 
-net = Network([2,3,1])
+        def feedforward(self,a):
+            for b,w in zip(self.biases,self.weights):
+                a = sigmoid(np.dot(w,a)+b)
+            return a
+
+#net = Network([2,3,1])
