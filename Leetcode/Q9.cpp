@@ -18,3 +18,23 @@ public:
         return false;
     }
 };
+
+//第二遍：上一次直接使用了int转string，并直接使用reverse来判断是否相同
+//如何不使用额外空间呢?
+//参考Q7,计算int反过来的数
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x < 0) return false;
+        int a = x;
+        long sum = 0;
+        while(x > 0)
+        {
+            sum  = sum * 10 + x%10;
+            x /= 10;
+        }
+        if(sum == a) return true;
+        return false;
+    }
+};

@@ -43,3 +43,37 @@ public:
         return (dif+target);
     }
 };
+
+
+//第二遍，和15题类似，但是求的是和target值相差最小的sum
+//每个测试用例只有唯一的解
+
+//思路，排序+two-pointer,每轮记录最小的diff
+class Solution {
+public:
+    int threeSumClosest(vector<int>& nums, int target) {
+        if(nums.size() < 3) return accumulate(nums.begin(),nums.end(),0);
+
+        sort(nums.begin(),nums.end());
+        int diff = INT_MAX;
+        for(int k = 0;k<nums.size()-2;++k) //选择第一个元素
+        {
+            int i = k+1;
+            int j = nums.size()-1;
+            //找出含nums[k]时，最接近的和,如果有等于target，直接return
+            int sum = target - nums[k];
+            while(i < j)
+            {
+                int s = nums[i] + nums[j];
+                int tmpdiff = s - sum;
+                if(abs(diff) > abs(tmpdiff))
+                    diff = tmpdiff; //不用向上次的方法设置内层的diff
+
+                if(s > sum) j--;
+                else if(s < sum) i++;
+                else return target; 
+            }
+        }
+        return diff + target;
+    }
+};

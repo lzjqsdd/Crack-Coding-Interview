@@ -83,3 +83,54 @@ int main()
 	for(p;p!=NULL;p=p->next)
 		cout<<p->val<<endl;
 }
+
+//上述方法使用了额外空间，而下面方法仅仅处理最后进位的额外空间
+//第二遍 AC
+//两个非空链表表示数组，8->7->2表示287,5->4->3表示345，求相加结果
+//刚好从链表开始的位置对齐进行相加
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+		ListNode *p = l1; //用l1表示最终的结果
+		ListNode *q = l2;
+		ListNode *par = NULL;
+		while(p!=NULL && q!=NULL)
+		{
+			p->val += q->val; //先不处理余数
+			par = p;
+			p = p->next;
+			q = q->next;
+		}
+		//这里以l1表示结果，所以如果l1比较长，则不处理。
+		//如果l2较长，把未加的l2的部分续上(对应的是p == NULL)
+		if(p == NULL) par->next = q;
+
+		//遍历l1处理进位
+		p = l1;
+		while(p!=NULL && p->next!=NULL)
+		{
+			if(p->val >= 10)
+			{
+				p->val-= 10;
+				p->next->val ++;
+			}
+			p = p->next;
+		}
+		while(p!=NULL && p->val >= 10)
+		{
+			p->val -= 10;
+			p->next = new ListNode(1);
+			p = p->next;
+		}
+		return l1;
+    }
+};

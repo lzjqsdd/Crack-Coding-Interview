@@ -24,3 +24,33 @@ public:
         return prefix;
     }
 };
+
+
+//第二遍AC
+//求一组string的最长公共前缀
+//如果只有一个字符串，则公共前缀仍为自身
+//以第一个字符串为对标，如果其他的同位置字符相同，则往后加
+
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        if(strs.size() == 0) return "";
+        if(strs.size() == 1) return strs[0];
+        else
+        {
+            int curpos = 0;
+            while(true)
+            {
+                for(int j=1;j<strs.size();++j)
+                {
+                    if(curpos < strs[j].size() && curpos < strs[0].size() 
+                                   && strs[j][curpos] == strs[0][curpos])
+                         continue;
+                    else return strs[0].substr(0,curpos); //此时curpos不匹配，匹配的长度为curpos
+                }
+                curpos++;
+            }
+        }
+        return "";
+    }
+};

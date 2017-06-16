@@ -81,3 +81,20 @@ int main()
 
 }
 
+
+
+
+//第二遍：
+//如果是有序，可以使用TwoPointers
+//AC
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+		int i = 0;
+		for(int i = 0;i<nums.size();++i)
+		{
+			auto it = find(nums.begin()+i+1,nums.end(),target-nums[i]);
+			if(it != nums.end()) return {i,it-nums.begin()};
+		}
+    }
+};

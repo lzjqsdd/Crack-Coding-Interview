@@ -1,4 +1,4 @@
-//n*n matrix,ºáÏò×İÏò¾ùÓĞĞò£¬ÕÒµÚk¸öĞ¡µÄ
+//n*n matrix,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½kï¿½ï¿½Ğ¡ï¿½ï¿½
 /*
 ---------------
 |1   5    9
@@ -10,13 +10,22 @@
 */
 
 
+matrix = [
+   [ 1,  5,  9],
+   [10, 11, 13],
+   [12, 13, 15]
+],
+k = 8,
+
+return 13
+
 class Solution {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
         int n = matrix.size();
         int s = 2*n-1;
         int i = 0;
-        while(k > s) { k-=s;s-=2;i++;}
+        while(k > s) { k-=s;s-=2;i++;} //å¹¶ä¸æ˜¯å¦‚ä¸Šå›¾æ‰€ç¤ºå¤–å±‚éƒ½å°äºå†…å±‚
         vector<int> target;
         target.push_back(matrix[i][i]);
         int j = i+1;

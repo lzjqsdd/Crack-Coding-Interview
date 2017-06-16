@@ -89,3 +89,44 @@ public:
         return solve(result,i+1,input,dict);
     }
 };
+
+
+
+//第二遍
+//手机键盘，打出一组数字(0~9),因为每个键盘上有多个字母，给出所有可能的字母组合
+//思路：
+//建立 数字和字母之间的映射map
+class Solution {
+public:
+    vector<string> letterCombinations(string digits) {
+        if(digits.size()==0) return {};
+        map<char,string> dict = 
+        {
+            {'1',""},
+            {'2',"abc"},
+            {'3',"def"},
+            {'4',"ghi"},
+            {'5',"jkl"},
+            {'6',"mno"},
+            {'7',"pqrs"},
+            {'8',"tuv"},
+            {'9',"wxyz"},
+            {'0',""}
+        };
+        vector<string> result = {""};
+        return letter(digits,0,dict,result);
+    }
+
+    //参数分别表示：输入的数字序列，当前处理第i个字母，字典，结果
+    vector<string> letter(string &digits,int i,map<char,string>&dict,vector<string>comb)
+    {
+        if(i == digits.size()) return comb;
+        vector<string> result;
+        for(string str:comb)
+        {
+            for(char c:dict[digits[i]])
+                result.push_back(string(str+c));
+        }
+        return letter(digits,i+1,dict,result);
+    }
+};

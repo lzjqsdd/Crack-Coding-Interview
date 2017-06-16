@@ -99,3 +99,46 @@ public:
         return result;
     }
 };
+
+
+
+//==================================
+//第二遍AC
+//给一个数组，要求找出三个元素，其和为0。
+//扔然是先排序，然后two-pointer，但是这里注意去重复
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        if(nums.size() < 3) return {};
+        else
+        {
+            vector<vector<int>> result;
+            sort(nums.begin(),nums.end());
+            for(auto it:nums) cout << it << ",";
+            for(int i=0;i<nums.size()-2;++i)
+            {
+                if(i-1 >= 0 && nums[i] == nums[i-1]) continue; //外层去重,去重是和已经选择过的元素比较
+                int sum = 0 - nums[i];
+                int s = i+1;
+                int e = nums.size()-1;
+                while(s < e)
+                {
+                    //内层去重
+                    while(s-1 >= i+1 && s < nums.size() && nums[s-1] == nums[s]) s++; //去重是和上次被选择过的元素比较
+                    while(e+1 <= nums.size()-1 && e >= 0&& nums[e+1] == nums[e]) e--; //
+                    if(s >= e) break;
+                    if(nums[s] + nums[e] ==  sum)
+                    {
+                        result.push_back({nums[i],nums[s],nums[e]});
+                        s++;e--;
+                    }
+                    else if(nums[s] + nums[e] < sum)
+                        s++;
+                    else
+                        e--;
+                }
+            }
+            return result;
+        }
+    }
+};
