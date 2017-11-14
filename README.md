@@ -1,4 +1,4 @@
-This Repository contains all my pcodes for preparing interview.
+This Repository contains all my codes for preparing interview.
 
 ### list
 - Algorithm **include Number,Tree,DP**
@@ -11,15 +11,15 @@ This Repository contains all my pcodes for preparing interview.
 - PythonMachineLearning
 
 ### Reference Book
-- _c++ primer_ by Stanley B. LippmanBarbara E. Moo JoséeLaJoie 
-- _Insider the c++ object  model_ by Houjie
-- _Effective C++_ by Scott Meyers
-- _More Effective C++_ by Scott Meyers
-- _Effective STL_ by Scott Meyers
-- _Crack the coding interview_
-- _Coding Interviews_ or _剑指offer_
-- _https://leetcode.com/_
-- _https://www.nowcoder.com_
+- **_c++ primer_** by Stanley B. LippmanBarbara E. Moo JoséeLaJoie 
+- **_Insider the c++ object  model** by Houjie
+- **_Effective C++_** by Scott Meyers
+- **_More Effective C++_** by Scott Meyers
+- **_Effective STL_** by Scott Meyers
+- **_Crack the coding interview_**
+- **_Coding Interviews_** or **_剑指offer_**
+- **_https://leetcode.com/_**
+- **_https://www.nowcoder.com_**
 
 
 ### Join
