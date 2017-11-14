@@ -12,7 +12,7 @@ This Repository contains all my codes for preparing interview.
 
 ### Reference Book
 - **_c++ primer_** by Stanley B. LippmanBarbara E. Moo JoséeLaJoie 
-- **_Insider the c++ object  model** by Houjie
+- **_Insider the c++ object  model_** by Houjie
 - **_Effective C++_** by Scott Meyers
 - **_More Effective C++_** by Scott Meyers
 - **_Effective STL_** by Scott Meyers
