@@ -1,14 +1,14 @@
 This Repository contains all my pcodes for preparing interview.
 
 ### list
-─ Algorithm **include Number,Tree,DP**
-─ Basic **include c++ basic knowledge**
-─ CPP-Primer 
-─ CrackInterview
-─ DesignPattern
-─ Leetcode **Contains about 230+ Solutions**
-─ POJ
-─ PythonMachineLearning
+- Algorithm **include Number,Tree,DP**
+- Basic **include c++ basic knowledge**
+- CPP-Primer 
+- CrackInterview
+- DesignPattern
+- Leetcode **Contains about 230+ Solutions**
+- POJ
+- PythonMachineLearning
 
 ### Reference Book
 - _c++ primer_ by Stanley B. LippmanBarbara E. Moo JoséeLaJoie 
