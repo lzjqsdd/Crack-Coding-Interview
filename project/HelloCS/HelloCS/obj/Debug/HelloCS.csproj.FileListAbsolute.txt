@@ -1,6 +1,0 @@
-E:\project\HelloCS\HelloCS\bin\Debug\HelloCS.exe.config
-E:\project\HelloCS\HelloCS\bin\Debug\HelloCS.exe
-E:\project\HelloCS\HelloCS\bin\Debug\HelloCS.pdb
-E:\project\HelloCS\HelloCS\obj\Debug\HelloCS.csprojResolveAssemblyReference.cache
-E:\project\HelloCS\HelloCS\obj\Debug\HelloCS.exe
-E:\project\HelloCS\HelloCS\obj\Debug\HelloCS.pdb
