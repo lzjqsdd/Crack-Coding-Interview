@@ -6,6 +6,8 @@ This Repository contains all my codes for preparing interview.
 - CPP-Primer 
 - CrackInterview
 - DesignPattern
+- EffectiveCPP
+- MoreEffectiveCPP
 - Leetcode **Contains about 230+ Solutions**
 - POJ
 - PythonMachineLearning

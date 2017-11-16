@@ -8,6 +8,8 @@
 - CPP-Primer **整理了本书各章节相关的例子**
 - CrackInterview
 - DesignPattern **包含了每类设计模式的测试代码以及说明**
+- EffectiveCPP **包含本书每个章节的测试例子**
+- MoreEffectiveCPP **包含本书每个章节的测试例子**
 - Leetcode **包含了leetcode上230多道题目的题解、以及测试用例，覆盖了各类题型**
 - POJ
 - PythonMachineLearning **机器学习的案例代码**
